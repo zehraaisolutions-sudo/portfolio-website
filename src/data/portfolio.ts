@@ -211,6 +211,8 @@ export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
+  { label: "AI Fields", href: "#ai-fields" },
+
   { label: "Work", href: "#portfolio" },
   { label: "Skills", href: "#skills" },
   { label: "Testimonials", href: "#testimonials" },
