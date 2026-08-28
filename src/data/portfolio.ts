@@ -118,6 +118,44 @@ export const services = [
   },
 ] as const;
 
+/** AI-powered service fields — "Your All-in-One AI Partner". */
+export const aiFields = [
+  {
+    title: "AI Website Development",
+    description: "AI-accelerated websites built end to end.",
+    icon: "MonitorSmartphone",
+  },
+  { title: "AI Video Creator", description: "Scripted, generated and edited AI video.", icon: "Video" },
+  {
+    title: "AI Research Assistant",
+    description: "Deep research, summaries and insight reports.",
+    icon: "Search",
+  },
+  {
+    title: "AI Content Creation",
+    description: "Blogs, captions and brand copy at scale.",
+    icon: "PenLine",
+  },
+  { title: "AI Trainer", description: "Team training on modern AI workflows.", icon: "GraduationCap" },
+  { title: "AI Freelancer", description: "On-demand AI help for any project.", icon: "UserRoundCheck" },
+  { title: "AI Consultant", description: "AI strategy and automation roadmaps.", icon: "Briefcase" },
+  { title: "Prompt Engineer", description: "Reliable prompts and AI system design.", icon: "Terminal" },
+  { title: "AI Designer", description: "Brand visuals and UI powered by AI.", icon: "Paintbrush" },
+  {
+    title: "And More",
+    description: "More AI-powered services on request.",
+    icon: "CirclePlus",
+  },
+] as const;
+
+/** Hero value badges. */
+export const heroBadges = [
+  { label: "Innovate Faster", icon: "Zap" },
+  { label: "Automate Smarter", icon: "ShieldCheck" },
+  { label: "Grow Bigger", icon: "TrendingUp" },
+] as const;
+
+
 export const frontendSkills = [
   { name: "HTML", level: 95 },
   { name: "CSS", level: 92 },
@@ -173,6 +211,8 @@ export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
+  { label: "AI Fields", href: "#ai-fields" },
+
   { label: "Work", href: "#portfolio" },
   { label: "Skills", href: "#skills" },
   { label: "Testimonials", href: "#testimonials" },
