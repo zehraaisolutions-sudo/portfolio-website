@@ -139,7 +139,7 @@ export const aiFields = [
   { title: "AI Trainer", description: "Team training on modern AI workflows.", icon: "GraduationCap" },
   { title: "AI Freelancer", description: "On-demand AI help for any project.", icon: "UserRoundCheck" },
   { title: "AI Consultant", description: "AI strategy and automation roadmaps.", icon: "Briefcase" },
-  { title: "Prompt Engineer", description: "Reliable prompts and AI system design.", icon: "Code2" },
+  { title: "Prompt Engineer", description: "Reliable prompts and AI system design.", icon: "Terminal" },
   { title: "AI Designer", description: "Brand visuals and UI powered by AI.", icon: "Paintbrush" },
   {
     title: "And More",
