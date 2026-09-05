@@ -18,9 +18,13 @@ export function Preloader() {
           exit={{ opacity: 0, filter: "blur(8px)" }}
           transition={{ duration: 0.5 }}
         >
-          <motion.div
-            className="gradient-surface size-14 rounded-2xl"
-            animate={{ rotate: [0, 90, 180, 270, 360], borderRadius: ["30%", "50%", "30%"] }}
+          <motion.img
+            src={logoAsset.url}
+            alt="Zehra AI Solutions logo"
+            width={88}
+            height={88}
+            className="glow-ring size-22 rounded-full"
+            animate={{ scale: [1, 1.06, 1], opacity: [0.85, 1, 0.85] }}
             transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
           />
           <p className="mt-6 font-display text-sm tracking-[0.3em] uppercase text-muted-foreground">
