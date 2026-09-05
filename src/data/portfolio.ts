@@ -120,33 +120,42 @@ export const services = [
 
 /** AI-powered service fields — "Your All-in-One AI Partner". */
 export const aiFields = [
+  { title: "AI Writing Services", description: "Blogs, brand copy and long-form content that ranks.", icon: "PenLine" },
+  { title: "AI Research Services", description: "Deep research, summaries and insight reports.", icon: "Search" },
+  { title: "AI Design Services", description: "Brand visuals, graphics and UI powered by AI.", icon: "Paintbrush" },
+  { title: "AI Video Services", description: "Scripted, generated and edited AI video content.", icon: "Video" },
+  {
+    title: "AI Presentation Services",
+    description: "Investor and client decks built fast and beautifully.",
+    icon: "Presentation",
+  },
   {
     title: "AI Website Development",
     description: "AI-accelerated websites built end to end.",
     icon: "MonitorSmartphone",
   },
-  { title: "AI Video Creator", description: "Scripted, generated and edited AI video.", icon: "Video" },
   {
-    title: "AI Research Assistant",
-    description: "Deep research, summaries and insight reports.",
-    icon: "Search",
+    title: "AI WordPress Development with Elementor",
+    description: "Custom Elementor builds you can edit yourself.",
+    icon: "LayoutTemplate",
   },
   {
-    title: "AI Content Creation",
-    description: "Blogs, captions and brand copy at scale.",
-    icon: "PenLine",
-  },
-  { title: "AI Trainer", description: "Team training on modern AI workflows.", icon: "GraduationCap" },
-  { title: "AI Freelancer", description: "On-demand AI help for any project.", icon: "UserRoundCheck" },
-  { title: "AI Consultant", description: "AI strategy and automation roadmaps.", icon: "Briefcase" },
-  { title: "Prompt Engineer", description: "Reliable prompts and AI system design.", icon: "Terminal" },
-  { title: "AI Designer", description: "Brand visuals and UI powered by AI.", icon: "Paintbrush" },
-  {
-    title: "And More",
-    description: "More AI-powered services on request.",
-    icon: "CirclePlus",
+    title: "AI Social Media Marketing",
+    description: "Content plans, creatives and growth campaigns.",
+    icon: "Megaphone",
   },
 ] as const;
+
+/** Verified training certificates. */
+export type Certificate = {
+  title: string;
+  issuer: string;
+  issued: string;
+  duration: string;
+  meta: string;
+  image: string;
+};
+
 
 /** Hero value badges. */
 export const heroBadges = [
