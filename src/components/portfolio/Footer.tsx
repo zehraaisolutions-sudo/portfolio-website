@@ -1,4 +1,5 @@
 import { navLinks } from "@/data/portfolio";
+import logoAsset from "@/assets/zehra-logo.png.asset.json";
 
 export function Footer() {
   return (
