@@ -1,6 +1,7 @@
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { navLinks } from "@/data/portfolio";
+import logoAsset from "@/assets/zehra-logo.png.asset.json";
 import { useTheme } from "./useTheme";
 
 export function Navbar() {
