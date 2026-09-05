@@ -1,6 +1,7 @@
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { navLinks } from "@/data/portfolio";
+import logoAsset from "@/assets/zehra-logo.png.asset.json";
 import { useTheme } from "./useTheme";
 
 export function Navbar() {
@@ -24,9 +25,13 @@ export function Navbar() {
         }`}
       >
         <a href="#home" className="flex min-w-0 items-center gap-2.5">
-          <span className="gradient-surface grid size-8 shrink-0 place-items-center rounded-lg font-display text-sm font-bold text-primary-foreground">
-            Z
-          </span>
+          <img
+            src={logoAsset.url}
+            alt="Zehra AI Solutions logo"
+            width={36}
+            height={36}
+            className="size-9 shrink-0 rounded-full"
+          />
           <span className="truncate font-display text-sm font-semibold sm:text-base">
             Zehra <span className="gradient-text">AI</span> Solutions
           </span>

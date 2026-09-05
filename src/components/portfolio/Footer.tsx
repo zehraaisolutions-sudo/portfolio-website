@@ -1,4 +1,5 @@
 import { navLinks } from "@/data/portfolio";
+import logoAsset from "@/assets/zehra-logo.png.asset.json";
 
 export function Footer() {
   return (
@@ -7,9 +8,13 @@ export function Footer() {
         <div className="grid gap-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center">
           <div className="min-w-0">
             <div className="flex items-center gap-2.5">
-              <span className="gradient-surface grid size-8 shrink-0 place-items-center rounded-lg font-display text-sm font-bold text-primary-foreground">
-                Z
-              </span>
+              <img
+                src={logoAsset.url}
+                alt="Zehra AI Solutions logo"
+                width={36}
+                height={36}
+                className="size-9 shrink-0 rounded-full"
+              />
               <span className="truncate font-display font-semibold">Zehra AI Solutions</span>
             </div>
             <p className="mt-3 text-sm text-muted-foreground">Building the Future with AI.</p>
