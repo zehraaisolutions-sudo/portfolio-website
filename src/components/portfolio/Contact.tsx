@@ -1,13 +1,14 @@
-import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
+import { Facebook, Github, Instagram, Mail, MapPin, Send, Youtube } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Reveal, SectionHeading } from "./Reveal";
 
 const socials = [
-  { label: "LinkedIn", href: "https://linkedin.com/", icon: Linkedin },
-  { label: "GitHub", href: "https://github.com/", icon: Github },
-  { label: "Fiverr", href: "https://www.fiverr.com/", icon: null },
-  { label: "Upwork", href: "https://www.upwork.com/", icon: null },
+  { label: "GitHub", href: "https://github.com/zehraaisolutions-sudo", icon: Github },
+  { label: "Facebook", href: "https://www.facebook.com/share/19ZsyuHBm3/", icon: Facebook },
+  { label: "Instagram", href: "https://www.instagram.com/zehraaisolutions", icon: Instagram },
+  { label: "YouTube", href: "https://youtube.com/@zehraaisolutions", icon: Youtube },
+  { label: "TikTok", href: "https://www.tiktok.com/@zehraaisolutions", icon: null },
 ];
 
 export function Contact() {
