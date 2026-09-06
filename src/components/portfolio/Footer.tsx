@@ -1,5 +1,14 @@
+import { Facebook, Github, Instagram, Youtube } from "lucide-react";
 import { navLinks } from "@/data/portfolio";
 import logoAsset from "@/assets/zehra-logo.png.asset.json";
+
+const socials = [
+  { label: "GitHub", href: "https://github.com/zehraaisolutions-sudo", icon: Github },
+  { label: "Facebook", href: "https://www.facebook.com/share/19ZsyuHBm3/", icon: Facebook },
+  { label: "Instagram", href: "https://www.instagram.com/zehraaisolutions", icon: Instagram },
+  { label: "YouTube", href: "https://youtube.com/@zehraaisolutions", icon: Youtube },
+  { label: "TikTok", href: "https://www.tiktok.com/@zehraaisolutions", icon: null },
+];
 
 export function Footer() {
   return (
@@ -31,6 +40,23 @@ export function Footer() {
             ))}
           </nav>
         </div>
+
+        <div className="mt-6 flex flex-wrap items-center gap-3">
+          {socials.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={s.label}
+              className="glass card-lift inline-flex items-center gap-2 rounded-full px-3.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {s.icon ? <s.icon className="size-4 text-accent" /> : null}
+              {s.label}
+            </a>
+          ))}
+        </div>
+
         <p className="mt-7 border-t border-glass-border pt-6 text-xs text-muted-foreground">
           © 2026 Zehra AI Solutions
         </p>
