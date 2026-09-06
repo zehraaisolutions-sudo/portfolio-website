@@ -1,6 +1,4 @@
 import { Facebook, Github, Instagram, Mail, MapPin, Send, Youtube } from "lucide-react";
-import { Icon } from "lucide-react";
-import { tiktok } from "@lucide/lab";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Reveal, SectionHeading } from "./Reveal";
@@ -10,7 +8,7 @@ const socials = [
   { label: "Facebook", href: "https://www.facebook.com/share/19ZsyuHBm3/", icon: Facebook },
   { label: "Instagram", href: "https://www.instagram.com/zehraaisolutions", icon: Instagram },
   { label: "YouTube", href: "https://youtube.com/@zehraaisolutions", icon: Youtube },
-  { label: "TikTok", href: "https://www.tiktok.com/@zehraaisolutions", icon: () => <Icon iconNode={tiktok} className="size-4 text-accent" /> },
+  { label: "TikTok", href: "https://www.tiktok.com/@zehraaisolutions", icon: null },
 ];
 
 export function Contact() {
