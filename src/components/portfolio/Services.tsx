@@ -1,4 +1,3 @@
-import { icons } from "lucide-react";
 import { services } from "@/data/portfolio";
 import { Reveal, SectionHeading } from "./Reveal";
 

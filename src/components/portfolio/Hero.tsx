@@ -22,15 +22,17 @@ export function Hero() {
 
         <Reveal delay={0.08}>
           <h1 className="mx-auto mt-6 max-w-4xl text-center text-4xl leading-[1.08] font-bold sm:text-5xl md:text-6xl lg:text-[4.25rem]">
-            Powering the Future with{" "}
-            <span className="gradient-text">AI Innovation</span>
+            AI Website Developer
+            <span className="gradient-text mt-2 block">
+              Building Modern Websites with Lovable
+            </span>
           </h1>
         </Reveal>
 
         <Reveal delay={0.16}>
           <p className="font-serif mx-auto mt-6 max-w-2xl text-center text-base italic text-muted-foreground sm:text-lg">
-            Smart AI solutions for a smarter tomorrow — modern websites, landing pages and
-            AI-powered web applications built with AI-assisted development.
+            I create beautiful landing pages, business websites, and AI-powered web
+            applications using modern technologies and AI-assisted development.
           </p>
         </Reveal>
 
