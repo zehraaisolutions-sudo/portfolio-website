@@ -2,6 +2,7 @@ import { Award, BadgeCheck, CalendarDays, Clock } from "lucide-react";
 import type { Certificate } from "@/data/portfolio";
 import socialMediaCert from "@/assets/certificate-ai-social-media-marketing.jpg";
 import vibeCodingCert from "@/assets/certificate-vibe-coding.jpg";
+import aiTrainingCert from "@/assets/certificate-ai-training.jpg.asset.json";
 import { Reveal, SectionHeading } from "./Reveal";
 
 const certificates: Certificate[] = [
