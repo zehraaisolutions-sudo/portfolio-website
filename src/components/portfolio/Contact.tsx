@@ -1,15 +1,8 @@
-import { Facebook, Github, Instagram, Mail, MapPin, Send, Youtube } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Send } from "lucide-react";
 import { useState } from "react";
+import { socials, whatsapp } from "@/data/portfolio";
 import { toast } from "sonner";
 import { Reveal, SectionHeading } from "./Reveal";
-
-const socials = [
-  { label: "GitHub", href: "https://github.com/zehraaisolutions-sudo", icon: Github },
-  { label: "Facebook", href: "https://www.facebook.com/share/19ZsyuHBm3/", icon: Facebook },
-  { label: "Instagram", href: "https://www.instagram.com/zehraaisolutions", icon: Instagram },
-  { label: "YouTube", href: "https://youtube.com/@zehraaisolutions", icon: Youtube },
-  { label: "TikTok", href: "https://www.tiktok.com/@zehraaisolutions", icon: null },
-];
 
 export function Contact() {
   const [sending, setSending] = useState(false);
@@ -108,7 +101,26 @@ export function Contact() {
               </a>
             </Reveal>
 
-            <Reveal delay={0.16}>
+            <Reveal delay={0.12}>
+              <a
+                href={whatsapp.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass card-lift grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4 rounded-2xl p-5"
+              >
+                <span className="gradient-surface grid size-10 shrink-0 place-items-center rounded-xl text-primary-foreground">
+                  <MessageCircle className="size-5" />
+                </span>
+                <span className="min-w-0">
+                  <span className="block text-xs tracking-wide text-muted-foreground uppercase">
+                    WhatsApp Business
+                  </span>
+                  <span className="block truncate text-sm font-semibold">{whatsapp.display}</span>
+                </span>
+              </a>
+            </Reveal>
+
+            <Reveal delay={0.18}>
               <div className="glass card-lift grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4 rounded-2xl p-5">
                 <span className="gradient-surface grid size-10 shrink-0 place-items-center rounded-xl text-primary-foreground">
                   <MapPin className="size-5" />
