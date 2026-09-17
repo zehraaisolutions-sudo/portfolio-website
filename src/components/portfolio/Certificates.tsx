@@ -22,6 +22,14 @@ const certificates: Certificate[] = [
     meta: "Awarded to Ismat Zehra",
     image: vibeCodingCert,
   },
+  {
+    title: "Artificial Intelligence — Basic to Advance Level Training",
+    issuer: "NDA Digital Skills",
+    issued: "02 September 2026",
+    duration: "1.5 Months",
+    meta: "Awarded to Ismat Zehra",
+    image: aiTrainingCert.url,
+  },
 ];
 
 /** Verified certificates, shown one by one. */
