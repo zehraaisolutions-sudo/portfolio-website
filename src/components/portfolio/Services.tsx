@@ -1,4 +1,3 @@
-import { icons } from "lucide-react";
 import { services } from "@/data/portfolio";
 import { Reveal, SectionHeading } from "./Reveal";
 
@@ -12,23 +11,20 @@ export function Services() {
           subtitle="From a single landing page to a full AI-powered web application — designed, built and deployed."
         />
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((s, i) => {
-            const Icon = icons[s.icon as keyof typeof icons];
-            return (
-              <Reveal key={s.title} delay={(i % 4) * 0.07}>
-                <article className="glass card-lift group h-full rounded-2xl p-6">
-                  <span className="glass grid size-11 place-items-center rounded-xl transition-colors group-hover:bg-primary/15">
-                    <Icon className="size-5 text-accent" />
-                  </span>
-                  <h3 className="mt-5 font-display text-base font-semibold">{s.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {s.description}
-                  </p>
-                </article>
-              </Reveal>
-            );
-          })}
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((s, i) => (
+            <Reveal key={s.title} delay={(i % 3) * 0.07}>
+              <article className="glass card-lift group h-full rounded-2xl p-6">
+                <span className="glass grid size-11 place-items-center rounded-xl transition-colors group-hover:bg-primary/15">
+                  <s.icon className="size-5 text-accent" />
+                </span>
+                <h3 className="mt-5 font-display text-base font-semibold">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {s.description}
+                </p>
+              </article>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

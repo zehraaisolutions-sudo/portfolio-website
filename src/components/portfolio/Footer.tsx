@@ -1,14 +1,6 @@
-import { Facebook, Github, Instagram, Youtube } from "lucide-react";
+import { socials } from "@/data/portfolio";
 import { navLinks } from "@/data/portfolio";
 import logoAsset from "@/assets/zehra-logo.png.asset.json";
-
-const socials = [
-  { label: "GitHub", href: "https://github.com/zehraaisolutions-sudo", icon: Github },
-  { label: "Facebook", href: "https://www.facebook.com/share/19ZsyuHBm3/", icon: Facebook },
-  { label: "Instagram", href: "https://www.instagram.com/zehraaisolutions", icon: Instagram },
-  { label: "YouTube", href: "https://youtube.com/@zehraaisolutions", icon: Youtube },
-  { label: "TikTok", href: "https://www.tiktok.com/@zehraaisolutions", icon: null },
-];
 
 export function Footer() {
   return (

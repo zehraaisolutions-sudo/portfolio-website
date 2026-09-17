@@ -1,42 +1,39 @@
-import { Quote, Star } from "lucide-react";
-import { testimonials } from "@/data/portfolio";
+import { Quote, Send } from "lucide-react";
 import { Reveal, SectionHeading } from "./Reveal";
 
+/**
+ * Honest client-feedback placeholder — no fake testimonials or invented reviews.
+ * Replace this panel with real client quotes as they come in.
+ */
 export function Testimonials() {
   return (
     <section id="testimonials" className="px-4 py-20 sm:px-6 md:py-28">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="Testimonials"
-          title={<>What clients <span className="gradient-text">say</span></>}
+          eyebrow="Client Feedback"
+          title={<>Real feedback from <span className="gradient-text">real clients</span></>}
+          subtitle="This space is reserved for genuine client reviews only — nothing here is scripted, paid for or invented."
         />
 
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {testimonials.map((t, i) => (
-            <Reveal key={t.name} delay={i * 0.1}>
-              <figure className="glass card-lift flex h-full flex-col rounded-3xl p-6">
-                <Quote className="size-6 text-accent" />
-                <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-foreground/90">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-                <div className="mt-5 flex gap-0.5" aria-label="5 out of 5 stars">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <Star key={s} className="size-3.5 fill-accent text-accent" />
-                  ))}
-                </div>
-                <figcaption className="mt-5 grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3 border-t border-glass-border pt-5">
-                  <span className="gradient-surface grid size-9 shrink-0 place-items-center rounded-full text-xs font-bold text-primary-foreground">
-                    {t.initials}
-                  </span>
-                  <span className="min-w-0">
-                    <span className="block truncate text-sm font-semibold">{t.name}</span>
-                    <span className="block truncate text-xs text-muted-foreground">{t.role}</span>
-                  </span>
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal delay={0.1}>
+          <div className="glass glow-ring mx-auto mt-12 max-w-3xl rounded-3xl p-8 text-center sm:p-10">
+            <span className="gradient-surface mx-auto grid size-12 place-items-center rounded-2xl text-primary-foreground">
+              <Quote className="size-6" />
+            </span>
+            <h3 className="mt-5 font-display text-lg font-semibold">Client feedback coming soon</h3>
+            <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              Reviews are published here only after real projects wrap up, shared with the
+              client's permission. Your business could be the first story on this page.
+            </p>
+            <a
+              href="#contact"
+              className="gradient-surface glow-ring mt-7 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
+            >
+              <Send className="size-4" />
+              Start a project
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

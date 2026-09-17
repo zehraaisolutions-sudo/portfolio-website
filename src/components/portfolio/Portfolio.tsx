@@ -10,7 +10,7 @@ export function Portfolio() {
         <SectionHeading
           eyebrow="Portfolio"
           title={<>Selected <span className="gradient-text">live projects</span></>}
-          subtitle="Every card links straight to the published website — open any project and explore it live."
+          subtitle="Every card links straight to the published website — demo and concept work, clearly labeled."
         />
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -38,6 +38,9 @@ export function Portfolio() {
                     </div>
                     <div className="aurora relative grid aspect-16/10 place-items-center opacity-90">
                       <div className="absolute inset-0 bg-background/45" />
+                      <span className="glass absolute top-3 left-3 rounded-full px-2.5 py-1 text-[10px] font-semibold tracking-wide text-muted-foreground uppercase">
+                        {p.label}
+                      </span>
                       <div className="relative px-6 text-center">
                         <p className="font-display text-lg font-bold sm:text-xl">{p.title}</p>
                         <p className="mt-1 text-[11px] tracking-[0.2em] uppercase text-muted-foreground">
