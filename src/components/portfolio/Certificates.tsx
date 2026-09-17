@@ -2,6 +2,7 @@ import { Award, BadgeCheck, CalendarDays, Clock } from "lucide-react";
 import type { Certificate } from "@/data/portfolio";
 import socialMediaCert from "@/assets/certificate-ai-social-media-marketing.jpg";
 import vibeCodingCert from "@/assets/certificate-vibe-coding.jpg";
+import aiTrainingCert from "@/assets/certificate-ai-training.jpg.asset.json";
 import { Reveal, SectionHeading } from "./Reveal";
 
 const certificates: Certificate[] = [
@@ -20,6 +21,14 @@ const certificates: Certificate[] = [
     duration: "1.5 Months",
     meta: "Awarded to Ismat Zehra",
     image: vibeCodingCert,
+  },
+  {
+    title: "Artificial Intelligence — Basic to Advance Level Training",
+    issuer: "NDA Digital Skills",
+    issued: "02 September 2026",
+    duration: "1.5 Months",
+    meta: "Awarded to Ismat Zehra",
+    image: aiTrainingCert.url,
   },
 ];
 
