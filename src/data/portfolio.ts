@@ -1,8 +1,25 @@
 /** Central content source — edit these arrays to customize the site. */
 
+import {
+  Building2,
+  Facebook,
+  Github,
+  Instagram,
+  LayoutTemplate,
+  Linkedin,
+  MessageCircle,
+  Bot,
+  Rocket,
+  ShoppingBag,
+  Youtube,
+  type LucideIcon,
+} from "lucide-react";
+
 export type Project = {
   title: string;
   category: string;
+  /** Honest label: "Demo Project" or "Concept Project" — not client work. */
+  label: "Demo Project" | "Concept Project";
   description: string;
   tech: string[];
   url: string;
@@ -13,6 +30,7 @@ export const projects: Project[] = [
   {
     title: "Restaurant Website",
     category: "Hospitality",
+    label: "Demo Project",
     description:
       "An appetite-driven restaurant experience with menu highlights, reservations and a warm editorial layout.",
     tech: ["React", "Tailwind CSS", "AI Assisted"],
@@ -22,6 +40,7 @@ export const projects: Project[] = [
   {
     title: "Dentist Website",
     category: "Healthcare",
+    label: "Concept Project",
     description:
       "A calm, trust-first clinic site with treatment pages, team credibility and booking-focused CTAs.",
     tech: ["React", "Tailwind CSS", "SEO"],
@@ -31,6 +50,7 @@ export const projects: Project[] = [
   {
     title: "Gym Landing Page",
     category: "Fitness",
+    label: "Demo Project",
     description:
       "High-energy conversion landing page with bold typography, program cards and membership pricing.",
     tech: ["React", "Motion", "Tailwind CSS"],
@@ -40,6 +60,7 @@ export const projects: Project[] = [
   {
     title: "Real Estate Website",
     category: "Property",
+    label: "Concept Project",
     description:
       "Premium property showcase with listing grids, filters and elegant agent-focused storytelling.",
     tech: ["React", "Tailwind CSS", "Responsive"],
@@ -49,6 +70,7 @@ export const projects: Project[] = [
   {
     title: "AI Chatbot Landing Page",
     category: "AI Product",
+    label: "Concept Project",
     description:
       "Product launch page for a conversational AI assistant with feature blocks and animated demos.",
     tech: ["React", "Motion", "AI UX"],
@@ -58,6 +80,7 @@ export const projects: Project[] = [
   {
     title: "AI SaaS Landing Page",
     category: "SaaS",
+    label: "Concept Project",
     description:
       "Skill-building SaaS funnel with pricing tiers, social proof and a crisp onboarding narrative.",
     tech: ["React", "Tailwind CSS", "Conversion"],
@@ -67,6 +90,7 @@ export const projects: Project[] = [
   {
     title: "Travel Agency Website",
     category: "Travel",
+    label: "Demo Project",
     description:
       "Elegant travel brand site with destination cards, itineraries and immersive imagery.",
     tech: ["React", "Tailwind CSS", "Motion"],
@@ -77,46 +101,31 @@ export const projects: Project[] = [
 
 export const services = [
   {
-    title: "AI Website Development",
-    description: "End-to-end websites built fast with AI-assisted engineering workflows.",
-    icon: "Sparkles",
-  },
-  {
-    title: "Landing Page Design",
-    description: "Conversion-focused pages designed around one clear business goal.",
-    icon: "Rocket",
-  },
-  {
     title: "Business Websites",
-    description: "Credible, structured multi-page sites for growing companies.",
-    icon: "Building2",
+    description: "Credible, structured multi-page sites that build trust and win customers.",
+    icon: Building2,
+  },
+  {
+    title: "Landing Pages",
+    description: "Conversion-focused single pages designed around one clear business goal.",
+    icon: Rocket,
   },
   {
     title: "Portfolio Websites",
     description: "Personal brand sites that make creators and freelancers look premium.",
-    icon: "LayoutTemplate",
+    icon: LayoutTemplate,
   },
   {
-    title: "AI Web Applications",
-    description: "Chat, automation and AI-powered tools wired into real product flows.",
-    icon: "Bot",
+    title: "E-commerce Websites",
+    description: "Online stores with product listings, cart flows and checkout-ready pages.",
+    icon: ShoppingBag,
   },
   {
-    title: "Website Redesign",
-    description: "Modernizing dated sites into fast, elegant, on-brand experiences.",
-    icon: "Wand",
+    title: "AI-Powered Websites",
+    description: "Websites wired with chat, automation and AI-driven product features.",
+    icon: Bot,
   },
-  {
-    title: "Responsive Web Design",
-    description: "Pixel-precise layouts that feel native on every screen size.",
-    icon: "Smartphone",
-  },
-  {
-    title: "Website Deployment",
-    description: "Production launches with domains, analytics and performance tuning.",
-    icon: "CloudUpload",
-  },
-] as const;
+] as const satisfies ReadonlyArray<{ title: string; description: string; icon: LucideIcon }>;
 
 /** AI-powered service fields — "Your All-in-One AI Partner". */
 export const aiFields = [
@@ -156,14 +165,12 @@ export type Certificate = {
   image: string;
 };
 
-
 /** Hero value badges. */
 export const heroBadges = [
   { label: "Innovate Faster", icon: "Zap" },
   { label: "Automate Smarter", icon: "ShieldCheck" },
   { label: "Grow Bigger", icon: "TrendingUp" },
 ] as const;
-
 
 export const frontendSkills = [
   { name: "HTML", level: 95 },
@@ -192,39 +199,33 @@ export const reasons = [
   { title: "SEO Friendly", description: "Semantic markup, metadata and fast loads.", icon: "Search" },
 ] as const;
 
-export const testimonials = [
-  {
-    quote:
-      "Zehra rebuilt our landing page in under a week and our enquiries doubled. The design feels far more expensive than what we paid.",
-    name: "Ayesha Khan",
-    role: "Founder, Bloom Studio",
-    initials: "AK",
-  },
-  {
-    quote:
-      "Clear communication, quick revisions and genuinely modern UI. She understood our clinic's tone immediately.",
-    name: "Dr. Omar Raza",
-    role: "Director, Pinnacle Dental",
-    initials: "OR",
-  },
-  {
-    quote:
-      "The AI features she added to our web app saved our team hours every week. Highly recommended for startups.",
-    name: "Daniel Meyer",
-    role: "CTO, Skillset AI",
-    initials: "DM",
-  },
+/** Official social accounts — shared by Contact and Footer. */
+export type Social = { label: string; href: string; icon: LucideIcon | null };
+
+export const socials: Social[] = [
+  { label: "GitHub", href: "https://github.com/zehraaisolutions-sudo", icon: Github },
+  { label: "Facebook Page", href: "https://www.facebook.com/ZehraAISolutions", icon: Facebook },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/zehraaisolutions", icon: Linkedin },
+  { label: "WhatsApp", href: "https://wa.me/923435207875", icon: MessageCircle },
+  { label: "Instagram", href: "https://www.instagram.com/zehraaisolutions", icon: Instagram },
+  { label: "YouTube", href: "https://youtube.com/@zehraaisolutions", icon: Youtube },
+  { label: "TikTok", href: "https://www.tiktok.com/@zehraaisolutions", icon: null },
 ];
+
+export const whatsapp = {
+  label: "WhatsApp Business",
+  href: "https://wa.me/923435207875",
+  display: "+92 343 5207875",
+};
 
 export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "AI Fields", href: "#ai-fields" },
-
   { label: "Work", href: "#portfolio" },
   { label: "Skills", href: "#skills" },
   { label: "Certificates", href: "#certificates" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Feedback", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
