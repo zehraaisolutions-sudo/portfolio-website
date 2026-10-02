@@ -37,14 +37,14 @@ export function SectionHeading({
 }) {
   return (
     <Reveal className="mx-auto max-w-2xl text-center">
-      <span className="glass inline-flex rounded-full px-4 py-1.5 text-xs font-semibold tracking-[0.18em] uppercase text-muted-foreground">
+      <span className="section-kicker">
         {eyebrow}
       </span>
       <h2 className="mt-5 text-3xl font-bold sm:text-4xl md:text-[2.75rem] md:leading-[1.1]">
         {title}
       </h2>
       {subtitle ? (
-        <p className="font-serif mt-4 text-base italic text-muted-foreground sm:text-lg">
+        <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
           {subtitle}
         </p>
       ) : null}

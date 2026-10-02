@@ -24,6 +24,7 @@ export type Project = {
   tech: string[];
   url: string;
   github: string;
+  group: "Business Websites" | "Landing Pages" | "Personal Brand";
 };
 
 export const projects: Project[] = [
@@ -36,6 +37,7 @@ export const projects: Project[] = [
     tech: ["React", "Tailwind CSS", "AI Assisted"],
     url: "https://zehra-ai-restaurant.lovable.app/",
     github: "https://github.com/",
+    group: "Business Websites",
   },
   {
     title: "Dentist Website",
@@ -46,6 +48,7 @@ export const projects: Project[] = [
     tech: ["React", "Tailwind CSS", "SEO"],
     url: "https://pinnacle-smile-solutions.lovable.app/",
     github: "https://github.com/",
+    group: "Business Websites",
   },
   {
     title: "Gym Landing Page",
@@ -56,6 +59,7 @@ export const projects: Project[] = [
     tech: ["React", "Motion", "Tailwind CSS"],
     url: "https://golden-kinetic-forge.lovable.app/",
     github: "https://github.com/",
+    group: "Landing Pages",
   },
   {
     title: "Real Estate Website",
@@ -66,6 +70,7 @@ export const projects: Project[] = [
     tech: ["React", "Tailwind CSS", "Responsive"],
     url: "https://luxury-property-pros.lovable.app/",
     github: "https://github.com/",
+    group: "Business Websites",
   },
   {
     title: "AI Chatbot Landing Page",
@@ -76,6 +81,7 @@ export const projects: Project[] = [
     tech: ["React", "Motion", "AI UX"],
     url: "https://aurora-chat-zen.lovable.app/",
     github: "https://github.com/",
+    group: "Landing Pages",
   },
   {
     title: "AI SaaS Landing Page",
@@ -86,6 +92,7 @@ export const projects: Project[] = [
     tech: ["React", "Tailwind CSS", "Conversion"],
     url: "https://build-your-skillset.lovable.app/",
     github: "https://github.com/",
+    group: "Personal Brand",
   },
   {
     title: "Travel Agency Website",
@@ -96,6 +103,7 @@ export const projects: Project[] = [
     tech: ["React", "Tailwind CSS", "Motion"],
     url: "https://globetrotter-elegance.lovable.app/",
     github: "https://github.com/",
+    group: "Business Websites",
   },
 ];
 
@@ -219,13 +227,11 @@ export const whatsapp = {
 };
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "AI Fields", href: "#ai-fields" },
-  { label: "Work", href: "#portfolio" },
-  { label: "Skills", href: "#skills" },
-  { label: "Certificates", href: "#certificates" },
-  { label: "Feedback", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "AI Fields", href: "/ai-fields" },
+  { label: "Work", href: "/work" },
+  { label: "Certificates", href: "/certificates" },
+  { label: "Contact", href: "/contact" },
 ];
