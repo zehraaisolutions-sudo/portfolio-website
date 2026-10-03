@@ -16,7 +16,7 @@ export function BackToTop() {
       type="button"
       aria-label="Back to top"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className={`glass glow-ring fixed right-5 bottom-5 z-50 grid size-11 place-items-center rounded-full transition-all duration-300 ${
+      className={`surface-elevated fixed right-4 bottom-18 z-50 grid size-11 place-items-center rounded-full border transition-all duration-300 sm:right-6 sm:bottom-20 ${
         show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
       }`}
     >

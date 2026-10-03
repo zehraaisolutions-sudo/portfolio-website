@@ -1,55 +1,17 @@
-import { Code2, Cpu, Layers } from "lucide-react";
+import { BrainCircuit, Code2, Megaphone, Sparkles } from "lucide-react";
+import logoAsset from "@/assets/zehra-logo.png.asset.json";
 import { Reveal, SectionHeading } from "./Reveal";
 
-const highlights = [
-  { icon: Cpu, title: "AI-first workflow", text: "Modern AI tooling accelerates every build." },
-  { icon: Layers, title: "Design + build", text: "One person from concept to deployment." },
-  { icon: Code2, title: "Clean foundations", text: "Component-based, maintainable codebases." },
+const categories = [
+  { title: "AI", icon: BrainCircuit, skills: ["AI Tools", "Prompt Engineering", "AI Content Creation", "AI Research", "AI Video", "AI Design"] },
+  { title: "Web", icon: Code2, skills: ["Website Development", "Vibe Coding", "Responsive Design", "WordPress", "Elementor"] },
+  { title: "Digital", icon: Megaphone, skills: ["Social Media Marketing", "Content Strategy", "Digital Marketing"] },
+  { title: "Freelancing", icon: Sparkles, skills: ["Project communication", "Research-led planning", "AI-assisted delivery"] },
 ];
 
 export function About() {
-  return (
-    <section id="about" className="px-4 py-20 sm:px-6 md:py-28">
-      <div className="mx-auto max-w-6xl">
-        <SectionHeading eyebrow="About Me" title="A developer who ships with intent" />
-
-        <div className="mt-12 grid gap-6 lg:grid-cols-[1.15fr_1fr] lg:items-center">
-          <Reveal className="glass glow-ring rounded-3xl p-7 sm:p-10">
-            <p className="text-lg leading-relaxed text-foreground/90 sm:text-xl">
-              Hi, I&apos;m <span className="gradient-text font-semibold">Zehra</span>, an AI Web
-              Developer passionate about building modern websites, landing pages, and AI-powered web
-              applications. I combine creativity with AI tools to deliver fast, clean, and
-              high-quality digital solutions for businesses and startups.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-2">
-              {["React", "Tailwind CSS", "AI Integration", "SEO", "Deployment"].map((t) => (
-                <span
-                  key={t}
-                  className="rounded-full bg-secondary px-3 py-1.5 text-xs font-medium text-secondary-foreground"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-          </Reveal>
-
-          <div className="grid gap-4">
-            {highlights.map((h, i) => (
-              <Reveal key={h.title} delay={i * 0.1}>
-                <div className="glass card-lift grid grid-cols-[auto_minmax(0,1fr)] items-start gap-4 rounded-2xl p-5">
-                  <span className="gradient-surface grid size-10 shrink-0 place-items-center rounded-xl text-primary-foreground">
-                    <h.icon className="size-5" />
-                  </span>
-                  <span className="min-w-0">
-                    <span className="block font-display text-sm font-semibold">{h.title}</span>
-                    <span className="mt-1 block text-sm text-muted-foreground">{h.text}</span>
-                  </span>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+  return <section id="about" className="px-4 py-20 sm:px-6 md:py-28"><div className="mx-auto max-w-6xl"><SectionHeading eyebrow="About" title={<>Creative thinking, <span className="gradient-text">practical execution</span></>} subtitle="AI and web expertise brought together to create polished digital work for modern businesses and professionals." />
+    <div className="mt-12 grid gap-5 lg:grid-cols-3"><Reveal className="surface-elevated overflow-hidden rounded-lg border p-7 lg:row-span-2"><img src={logoAsset.url} alt="Zehra AI Solutions brand portrait" width={180} height={180} className="mx-auto size-40 rounded-full object-cover" /><h3 className="mt-7 text-2xl font-semibold">Hi, I&apos;m Zehra.</h3><p className="mt-4 leading-relaxed text-muted-foreground">I&apos;m an AI freelancer and website developer focused on modern websites, AI-assisted content, research, design and practical digital solutions. My direction combines clear communication, thoughtful design and efficient AI-supported workflows.</p></Reveal>
+      {categories.map((category, index) => <Reveal key={category.title} delay={(index % 2) * 0.06}><article className="surface-elevated card-lift h-full rounded-lg border p-6"><span className="icon-tile"><category.icon /></span><h3 className="mt-5 text-lg font-semibold">{category.title}</h3><div className="mt-4 flex flex-wrap gap-2">{category.skills.map((skill) => <span key={skill} className="rounded-md bg-secondary px-3 py-1.5 text-xs text-secondary-foreground">{skill}</span>)}</div></article></Reveal>)}
+    </div></div></section>;
 }
