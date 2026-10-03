@@ -226,6 +226,8 @@ export const whatsapp = {
   display: "+92 343 5207875",
 };
 
+export type NavPath = "/" | "/about" | "/services" | "/ai-fields" | "/work" | "/certificates" | "/contact";
+
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
@@ -234,4 +236,4 @@ export const navLinks = [
   { label: "Work", href: "/work" },
   { label: "Certificates", href: "/certificates" },
   { label: "Contact", href: "/contact" },
-];
+] as const satisfies ReadonlyArray<{ label: string; href: NavPath }>;

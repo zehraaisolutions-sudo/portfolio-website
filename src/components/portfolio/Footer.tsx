@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { aiFields, navLinks, services, socials } from "@/data/portfolio";
+import { aiFields, navLinks, services, socials, type NavPath } from "@/data/portfolio";
 import logoAsset from "@/assets/zehra-logo.png.asset.json";
 
 export function Footer() {
@@ -12,6 +12,6 @@ export function Footer() {
   </div><p className="mt-10 border-t pt-6 text-xs text-muted-foreground">© 2026 Zehra AI Solutions. All rights reserved.</p></div></footer>;
 }
 
-function FooterGroup({ title, items }: { title: string; items: Array<{ label: string; href: string }> }) {
+function FooterGroup({ title, items }: { title: string; items: ReadonlyArray<{ label: string; href: NavPath }> }) {
   return <div><h2 className="text-sm font-semibold">{title}</h2><ul className="mt-4 grid gap-2.5">{items.map((item) => <li key={`${item.href}-${item.label}`}><Link to={item.href} className="text-sm text-muted-foreground hover:text-foreground">{item.label}</Link></li>)}</ul></div>;
 }
