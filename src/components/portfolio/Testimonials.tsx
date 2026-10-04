@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Quote, Send } from "lucide-react";
 import { Reveal, SectionHeading } from "./Reveal";
 
@@ -25,13 +26,13 @@ export function Testimonials() {
               Reviews are published here only after real projects wrap up, shared with the
               client's permission. Your business could be the first story on this page.
             </p>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="gradient-surface glow-ring mt-7 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
             >
               <Send className="size-4" />
               Start a project
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>

@@ -12,6 +12,13 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Toaster } from "@/components/ui/sonner";
+import { AuroraBackground } from "@/components/portfolio/AuroraBackground";
+import { Navbar } from "@/components/portfolio/Navbar";
+import { Footer } from "@/components/portfolio/Footer";
+import { BackToTop } from "@/components/portfolio/BackToTop";
+import { CustomCursor } from "@/components/portfolio/CustomCursor";
+import { FloatingActions } from "@/components/portfolio/FloatingActions";
+import { ScrollProgress } from "@/components/portfolio/ScrollProgress";
 
 function NotFoundComponent() {
   return (
@@ -99,7 +106,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Lora:ital,wght@1,400;1,500&family=Hind+Madurai:wght@300;400;500;600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap",
       },
     ],
   }),
@@ -129,8 +136,14 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+      <ScrollProgress />
+      <AuroraBackground />
+      <CustomCursor />
+      <Navbar />
       <Outlet />
+      <Footer />
+      <BackToTop />
+      <FloatingActions />
     </QueryClientProvider>
   );
 }

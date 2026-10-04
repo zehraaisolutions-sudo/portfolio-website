@@ -1,80 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
-
-import { AuroraBackground } from "@/components/portfolio/AuroraBackground";
-import { Navbar } from "@/components/portfolio/Navbar";
+import { Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 import { Hero } from "@/components/portfolio/Hero";
-import { About } from "@/components/portfolio/About";
 import { Services } from "@/components/portfolio/Services";
 import { AIFields } from "@/components/portfolio/AIFields";
-import { Certificates } from "@/components/portfolio/Certificates";
-
 import { Portfolio } from "@/components/portfolio/Portfolio";
-import { Skills } from "@/components/portfolio/Skills";
+import { Certificates } from "@/components/portfolio/Certificates";
 import { WhyChooseMe } from "@/components/portfolio/WhyChooseMe";
 import { Testimonials } from "@/components/portfolio/Testimonials";
-import { Contact } from "@/components/portfolio/Contact";
-import { Footer } from "@/components/portfolio/Footer";
-import { BackToTop } from "@/components/portfolio/BackToTop";
-import { CustomCursor } from "@/components/portfolio/CustomCursor";
-import { Preloader } from "@/components/portfolio/Preloader";
+import { WorkWithMe } from "@/components/portfolio/WorkWithMe";
+import { QuickNavigator } from "@/components/portfolio/QuickNavigator";
+import { Button } from "@/components/ui/button";
 
-const title = "Zehra AI Solutions — AI Web Developer & Website Designer";
-const description =
-  "Zehra AI Solutions builds modern AI-powered websites, landing pages and web apps with React, Tailwind CSS and AI-assisted development.";
-
+const title = "Zehra AI Solutions | AI Freelancer & AI Website Developer";
+const description = "Zehra AI Solutions provides AI-powered websites, AI content, research, design, video, WordPress, social media and digital solutions for businesses and professionals.";
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Person",
-          name: "Zehra",
-          jobTitle: "AI Web Developer",
-          worksFor: { "@type": "Organization", name: "Zehra AI Solutions" },
-          email: "hello@zehraaisolutions.com",
-          address: { "@type": "PostalAddress", addressCountry: "PK" },
-          knowsAbout: ["React", "Tailwind CSS", "AI Web Development", "Landing Pages", "SEO"],
-        }),
-      },
-    ],
-  }),
-  component: Index,
+  head: () => ({ meta: [{ title }, { name: "description", content: description }, { property: "og:title", content: title }, { property: "og:description", content: description }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }], links: [{ rel: "canonical", href: "/" }] }),
+  component: HomePage,
 });
 
-function Index() {
-  return (
-    <>
-      <Preloader />
-      <CustomCursor />
-      <AuroraBackground />
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <AIFields />
-
-        <Portfolio />
-        <Skills />
-        <Certificates />
-        <WhyChooseMe />
-        <Testimonials />
-        <Contact />
-      </main>
-      <Footer />
-      <BackToTop />
-    </>
-  );
+function HomePage() {
+  return <main><Hero /><div id="home-preview"><QuickNavigator /><Services compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/services">Explore all services <ArrowRight /></Link></Button></div><AIFields compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/ai-fields">Explore all AI fields <ArrowRight /></Link></Button></div><Portfolio compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/work">View all work <ArrowRight /></Link></Button></div><Certificates /><WhyChooseMe /><Testimonials /><WorkWithMe /></div></main>;
 }
