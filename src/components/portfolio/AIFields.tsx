@@ -24,7 +24,7 @@ export function AIFields({ compact = false }: { compact?: boolean }) {
                 <span className="icon-tile"><Icon /></span>
                 <h3 className="mt-5 text-base font-semibold">{field.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{field.description}</p>
-                <ul className="mt-4 grid gap-2 text-xs text-muted-foreground">{details[index].map((item) => <li key={item} className="flex items-center gap-2"><Check className="size-3.5 text-accent" />{item}</li>)}</ul>
+                <ul className="mt-4 grid gap-2 text-xs text-muted-foreground">{(details[index] ?? []).map((item) => <li key={item} className="flex items-center gap-2"><Check className="size-3.5 text-accent" />{item}</li>)}</ul>
                 <Button asChild variant="link" className="mt-auto w-fit px-0 pt-5 text-accent"><Link to="/contact" search={{ service: field.title }}>Learn more <ArrowRight /></Link></Button>
               </article>
             </Reveal>;
