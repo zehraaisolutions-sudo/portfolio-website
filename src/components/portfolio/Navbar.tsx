@@ -68,7 +68,7 @@ export function Navbar() {
                   <Link to={link.href} onClick={close} className="min-w-0 py-3 text-sm font-semibold">{link.label}</Link>
                   {items ? <Button size="icon" variant="ghost" onClick={() => setExpanded(expanded === link.label ? null : link.label)} aria-label={`Expand ${link.label}`}><ChevronDown className={`transition-transform ${expanded === link.label ? "rotate-180" : ""}`} /></Button> : null}
                 </div>
-                {items && expanded === link.label ? <div className="grid gap-1 pb-3 pl-3">{items.map((item, index) => <Link key={item} to={link.href} hash={link.label === "Services" ? `service-${index + 1}` : link.label === "AI Fields" ? `field-${index + 1}` : undefined} search={link.label === "Work" ? { category: item } : undefined} onClick={close} className="py-2 text-sm text-muted-foreground">{item}</Link>)}</div> : null}
+                {items && expanded === link.label ? <div className="grid gap-1 pb-3 pl-3">{items.map((item, index) => link.label === "Work" ? <Link key={item} to="/work" search={{ category: item }} onClick={close} className="py-2 text-sm text-muted-foreground">{item}</Link> : link.label === "Services" ? <Link key={item} to="/services" hash={`service-${index + 1}`} onClick={close} className="py-2 text-sm text-muted-foreground">{item}</Link> : <Link key={item} to="/ai-fields" hash={`field-${index + 1}`} onClick={close} className="py-2 text-sm text-muted-foreground">{item}</Link>)}</div> : null}
               </div>;
             })}
           </div>

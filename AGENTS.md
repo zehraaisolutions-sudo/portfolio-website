@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Architecture
+- Use dedicated TanStack routes for Home, About, Services, AI Fields, Work, Certificates, and Contact so each major portfolio area has a shareable URL and unique metadata.
+- Keep shared navigation, background, footer, scroll controls, and contact actions in the root layout so they remain consistent across all pages.

@@ -4,14 +4,12 @@ import {
   Building2,
   Facebook,
   Github,
-  Instagram,
   LayoutTemplate,
   Linkedin,
   MessageCircle,
   Bot,
   Rocket,
   ShoppingBag,
-  Youtube,
   type LucideIcon,
 } from "lucide-react";
 
@@ -213,11 +211,8 @@ export type Social = { label: string; href: string; icon: LucideIcon | null };
 export const socials: Social[] = [
   { label: "GitHub", href: "https://github.com/zehraaisolutions-sudo", icon: Github },
   { label: "Facebook Page", href: "https://www.facebook.com/ZehraAISolutions", icon: Facebook },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/zehraaisolutions", icon: Linkedin },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/zehraaisolutions/", icon: Linkedin },
   { label: "WhatsApp", href: "https://wa.me/923435207875", icon: MessageCircle },
-  { label: "Instagram", href: "https://www.instagram.com/zehraaisolutions", icon: Instagram },
-  { label: "YouTube", href: "https://youtube.com/@zehraaisolutions", icon: Youtube },
-  { label: "TikTok", href: "https://www.tiktok.com/@zehraaisolutions", icon: null },
 ];
 
 export const whatsapp = {

@@ -24,7 +24,7 @@ export function Services({ compact = false }: { compact?: boolean }) {
                 <div className="flex items-start justify-between"><span className="icon-tile"><service.icon /></span><span className="text-sm font-semibold text-muted-foreground">0{index + 1}</span></div>
                 <h3 className="mt-6 text-xl font-semibold">{service.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{service.description}</p>
-                <ul className="mt-5 grid gap-2 text-sm">{features[index].map((feature) => <li key={feature} className="flex items-center gap-2"><Check className="size-4 text-accent" />{feature}</li>)}</ul>
+                <ul className="mt-5 grid gap-2 text-sm">{(features[index] ?? []).map((feature) => <li key={feature} className="flex items-center gap-2"><Check className="size-4 text-accent" />{feature}</li>)}</ul>
                 <Button asChild variant="ghost" className="mt-6 w-fit px-0 text-accent hover:bg-transparent hover:text-accent/80"><Link to="/contact" search={{ service: service.title }}>Get Started <ArrowRight /></Link></Button>
               </article>
             </Reveal>

@@ -7,7 +7,7 @@ import { Reveal, SectionHeading } from "./Reveal";
 
 const filters = ["All", "Business Websites", "Landing Pages", "Personal Brand"] as const;
 
-export function Portfolio({ compact = false, initialCategory = "All" }: { compact?: boolean; initialCategory?: string }) {
+export function Portfolio({ compact = false, initialCategory = "All" }: { compact?: boolean; initialCategory?: string | undefined }) {
   const [filter, setFilter] = useState(filters.includes(initialCategory as typeof filters[number]) ? initialCategory : "All");
   const [preview, setPreview] = useState<(typeof projects)[number] | null>(null);
   const visible = projects.filter((project) => filter === "All" || project.group === filter).slice(0, compact ? 3 : projects.length);
