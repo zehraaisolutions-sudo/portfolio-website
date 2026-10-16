@@ -1,4 +1,9 @@
 # Roadmap
+- [ ] Refresh homepage, About, skills, services, and featured projects from the supplied brief while preserving existing content.
+- [ ] Add scrolling homepage navigation without removing existing routes.
+- [ ] Update supplied social links and truthful CV/unavailable project states.
+- [ ] Implement protected message storage and real owner email delivery (requires email-domain setup).
+- [ ] Verify desktop, tablet, mobile, preserved links, and contact submission.
 - [x] Complete approved multi-page portfolio redesign.
 - [x] Hide Instagram, TikTok, and YouTube from visible contact areas.
 - [x] Set LinkedIn to https://www.linkedin.com/in/zehraaisolutions/.
