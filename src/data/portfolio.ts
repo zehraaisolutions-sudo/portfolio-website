@@ -4,6 +4,8 @@ import {
   Building2,
   Facebook,
   Github,
+  Instagram,
+  Youtube,
   LayoutTemplate,
   Linkedin,
   MessageCircle,
@@ -211,7 +213,9 @@ export type Social = { label: string; href: string; icon: LucideIcon | null };
 export const socials: Social[] = [
   { label: "GitHub", href: "https://github.com/zehraaisolutions-sudo", icon: Github },
   { label: "Facebook Page", href: "https://www.facebook.com/ZehraAISolutions", icon: Facebook },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/zehraaisolutions/", icon: Linkedin },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/zehraaisolutions", icon: Linkedin },
+  { label: "YouTube", href: "https://www.youtube.com/@AIEducation-p2y", icon: Youtube },
+  { label: "Instagram", href: "https://www.instagram.com/aieducation.pk", icon: Instagram },
   { label: "WhatsApp", href: "https://wa.me/923435207875", icon: MessageCircle },
 ];
 

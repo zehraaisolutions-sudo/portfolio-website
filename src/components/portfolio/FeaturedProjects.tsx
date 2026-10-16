@@ -1,0 +1,8 @@
+import { ExternalLink, Github } from 'lucide-react';
+import { featuredProjects } from '@/data/profile';
+import { Button } from '@/components/ui/button';
+import { Reveal, SectionHeading } from './Reveal';
+
+export function FeaturedProjects() {
+  return <section id="projects" className="px-4 py-16 sm:px-6 md:py-24"><div className="mx-auto max-w-6xl"><SectionHeading eyebrow="Projects" title="A practical, creative portfolio" subtitle="Web development, AI learning, and content creation." /><div className="mt-10 grid gap-5 md:grid-cols-2">{featuredProjects.map((project) => <Reveal key={project.title}><article className="card-lift flex h-full flex-col overflow-hidden rounded-lg border bg-card"><div className="flex aspect-[16/7] items-center justify-center border-b bg-secondary/50"><project.icon className="size-14 text-accent" aria-hidden="true" /></div><div className="flex flex-1 flex-col p-6"><span className="section-kicker">{project.label}</span><h3 className="mt-3 text-xl font-semibold">{project.title}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{project.description}</p><div className="mt-4 flex flex-wrap gap-2">{project.tools.map((tool) => <span key={tool} className="rounded-md bg-secondary px-2.5 py-1 text-xs">{tool}</span>)}</div><div className="mt-auto flex flex-wrap gap-2 pt-6">{project.url ? <Button asChild><a href={project.url} target="_blank" rel="noopener noreferrer">{project.action}<ExternalLink /></a></Button> : <Button disabled>{project.action}</Button>}<Button disabled variant="outline" title="No project repository has been supplied"><Github /> Repository unavailable</Button></div></div></article></Reveal>)}</div></div></section>;
+}
