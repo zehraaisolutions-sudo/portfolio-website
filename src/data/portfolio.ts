@@ -225,6 +225,12 @@ export const whatsapp = {
   display: "+92 343 5207875",
 };
 
+/** Professional CV served from the site itself so it downloads reliably. */
+export const cv = {
+  href: "/downloads/Ismat-Zehra-Professional-CV.pdf",
+  label: "Download CV",
+} as const;
+
 export type NavPath = "/" | "/about" | "/services" | "/ai-fields" | "/work" | "/certificates" | "/contact";
 
 export const navLinks = [
