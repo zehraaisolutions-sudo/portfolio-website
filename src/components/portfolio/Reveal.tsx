@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import type { ReactNode } from "react";
 
 /** Scroll-reveal wrapper used across all sections. */
@@ -13,13 +13,14 @@ export function Reveal({
   y?: number;
   className?: string;
 }) {
+  const reducedMotion = useReducedMotion();
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y }}
+      initial={reducedMotion ? false : { opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, delay, ease: [0.2, 0.8, 0.2, 1] }}
+      transition={{ duration: reducedMotion ? 0 : 0.35, delay, ease: [0.2, 0.8, 0.2, 1] }}
     >
       {children}
     </motion.div>

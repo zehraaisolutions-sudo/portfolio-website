@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { frontendSkills, tools } from "@/data/portfolio";
 import { Reveal, SectionHeading } from "./Reveal";
+import { skillGroups } from "@/data/profile";
 
 export function Skills() {
   return (
@@ -8,11 +9,12 @@ export function Skills() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="Skills"
-          title={<>The <span className="gradient-text">stack</span> behind the work</>}
+          title="Skills & Tools"
         />
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          <Reveal className="glass glow-ring rounded-3xl p-7 sm:p-8">
+        <div className="mt-10 grid gap-5 md:grid-cols-2">{skillGroups.map((group) => <Reveal key={group.title}><article className="h-full rounded-lg border bg-card p-6"><span className="icon-tile"><group.icon /></span><h3 className="mt-5 text-xl font-semibold">{group.title}</h3><div className="mt-4 flex flex-wrap gap-2">{group.skills.map((skill) => <span key={skill} className="rounded-md bg-secondary px-3 py-2 text-sm">{skill}</span>)}</div></article></Reveal>)}</div>
+        <details className="mt-8"><summary className="cursor-pointer py-3 text-sm text-muted-foreground">Frontend self-assessment & additional tools</summary><div className="mt-4 grid gap-6 lg:grid-cols-2">
+          <Reveal className="glass glow-ring rounded-lg p-7 sm:p-8">
             <h3 className="font-display text-lg font-semibold">Frontend</h3>
             <ul className="mt-6 space-y-5">
               {frontendSkills.map((s, i) => (
@@ -42,10 +44,10 @@ export function Skills() {
             </ul>
           </Reveal>
 
-          <Reveal delay={0.1} className="glass glow-ring rounded-3xl p-7 sm:p-8">
+          <Reveal delay={0.1} className="glass glow-ring rounded-lg p-7 sm:p-8">
             <h3 className="font-display text-lg font-semibold">Tools</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              AI and deployment tooling I use daily to move fast without cutting corners.
+              AI and deployment tools used in my workflow.
             </p>
             <div className="mt-6 flex flex-wrap gap-2.5">
               {tools.map((t, i) => (
@@ -62,7 +64,7 @@ export function Skills() {
               ))}
             </div>
           </Reveal>
-        </div>
+        </div></details>
       </div>
     </section>
   );

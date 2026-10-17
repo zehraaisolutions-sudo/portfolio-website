@@ -1,6 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import { About } from "@/components/portfolio/About";
+import { Skills } from "@/components/portfolio/Skills";
+import { FeaturedProjects } from "@/components/portfolio/FeaturedProjects";
+import { PracticalServices } from "@/components/portfolio/PracticalServices";
+import { Contact } from "@/components/portfolio/Contact";
 import { Hero } from "@/components/portfolio/Hero";
 import { Services } from "@/components/portfolio/Services";
 import { AIFields } from "@/components/portfolio/AIFields";
@@ -9,7 +14,6 @@ import { Certificates } from "@/components/portfolio/Certificates";
 import { WhyChooseMe } from "@/components/portfolio/WhyChooseMe";
 import { Testimonials } from "@/components/portfolio/Testimonials";
 import { WorkWithMe } from "@/components/portfolio/WorkWithMe";
-import { QuickNavigator } from "@/components/portfolio/QuickNavigator";
 import { Button } from "@/components/ui/button";
 
 const title = "Zehra AI Solutions | AI Freelancer & AI Website Developer";
@@ -20,5 +24,5 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
-  return <main><Hero /><div id="home-preview"><QuickNavigator /><Services compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/services">Explore all services <ArrowRight /></Link></Button></div><AIFields compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/ai-fields">Explore all AI fields <ArrowRight /></Link></Button></div><Portfolio compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/work">View all work <ArrowRight /></Link></Button></div><Certificates /><WhyChooseMe /><Testimonials /><WorkWithMe /></div></main>;
+  return <main><Hero /><About /><Skills /><FeaturedProjects /><PracticalServices /><div id="home-preview"><Services compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/services">Explore all services <ArrowRight /></Link></Button></div><AIFields compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/ai-fields">Explore all AI fields <ArrowRight /></Link></Button></div><Portfolio compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/work">View all work <ArrowRight /></Link></Button></div><Certificates /><WhyChooseMe /><Testimonials /><WorkWithMe /><Contact /></div></main>;
 }
