@@ -4,7 +4,7 @@ import logoAsset from "@/assets/zehra-logo.png.asset.json";
 
 export function Footer() {
   return <footer className="border-t border-border/70 bg-card/40 px-4 py-12 sm:px-6"><div className="mx-auto max-w-7xl"><div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
-    <div><Link to="/" className="flex items-center gap-3"><img src={logoAsset.url} alt="Zehra AI Solutions logo" width={42} height={42} className="size-10 rounded-full" /><span className="font-display text-lg font-semibold">Zehra AI Solutions</span></Link><p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">Modern websites, AI-assisted digital experiences and practical creative services for businesses and professionals.</p></div>
+    <div><Link to="/" className="flex items-center gap-3"><img src={logoAsset.url} alt="Zehra AI Solutions logo" width={42} height={42} className="size-10 rounded-full" /><span className="font-display text-lg font-semibold">Zehra AI Solutions</span></Link><p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">Building AI-powered websites and digital solutions.</p></div>
     <FooterGroup title="Quick Links" items={navLinks.map((item) => ({ label: item.label, href: item.href }))} />
     <FooterGroup title="Services" items={services.map((item) => ({ label: item.title, href: "/services" }))} />
     <FooterGroup title="AI Fields" items={aiFields.map((item) => ({ label: item.title.replace(" Services", ""), href: "/ai-fields" }))} />

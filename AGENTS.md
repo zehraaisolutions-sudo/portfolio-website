@@ -12,3 +12,7 @@
 ## Architecture
 - Use dedicated TanStack routes for Home, About, Services, AI Fields, Work, Certificates, and Contact so each major portfolio area has a shareable URL and unique metadata.
 - Keep shared navigation, background, footer, scroll controls, and contact actions in the root layout so they remain consistent across all pages.
+
+- Keep supplementary profile content in a separate browser-safe data module; existing portfolio records remain intact to preserve verified URLs.
+- Use homepage anchors alongside retained content routes so in-page navigation never removes shareable pages.
+- Public contact submissions are validated server-side, privately stored through a service-only atomic rate-limited function, and never reported as emailed until a verified sender is wired.

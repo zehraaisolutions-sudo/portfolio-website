@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { ChevronDown, Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react";
 import { aiFields, navLinks, projects, services } from "@/data/portfolio";
@@ -6,9 +6,12 @@ import logoAsset from "@/assets/zehra-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "./useTheme";
 
+const homepageLinks = [{ label: "Home", hash: "home" }, { label: "About", hash: "about" }, { label: "Skills", hash: "skills" }, { label: "Projects", hash: "projects" }, { label: "Services", hash: "digital-services" }, { label: "Contact", hash: "contact" }];
+
 const groups = ["Business Websites", "Landing Pages", "Personal Brand"] as const;
 
 export function Navbar() {
+  const isHome = useLocation().pathname === "/";
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState<string | null>(null);
   const { theme, toggle } = useTheme();
@@ -28,7 +31,7 @@ export function Navbar() {
           <span className="truncate font-display text-base font-semibold sm:text-lg">Zehra <span className="text-accent">AI</span> Solutions</span>
         </Link>
         <div className="hidden items-center gap-1 lg:flex">
-          {navLinks.map((link) => {
+          {isHome ? <><div className="flex">{homepageLinks.map((item) => <a key={item.hash} href={`#${item.hash}`} className="px-3 py-3 text-sm text-muted-foreground hover:text-foreground">{item.label}</a>)}</div><div className="group relative"><span tabIndex={0} className="inline-flex items-center gap-1 px-3 py-3 text-sm">Pages<ChevronDown className="size-3.5" /></span><div className="invisible absolute right-0 top-full grid w-48 rounded-lg border bg-popover p-2 opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">{navLinks.map((item) => <Link key={item.href} to={item.href} className="rounded-md px-3 py-2 text-sm hover:bg-secondary">{item.label}</Link>)}</div></div></> : navLinks.map((link) => {
             const items = dropdowns[link.label as keyof typeof dropdowns];
             return (
               <div key={link.href} className="group relative">
@@ -61,6 +64,7 @@ export function Navbar() {
       {open ? (
         <div className="max-h-[calc(100svh-5rem)] overflow-y-auto border-t bg-background px-4 py-4 lg:hidden">
           <div className="mx-auto grid max-w-7xl gap-1">
+            {isHome ? <div className="grid grid-cols-2 gap-1 border-b pb-3">{homepageLinks.map((item) => <a key={item.hash} href={`#${item.hash}`} onClick={close} className="py-3 text-sm font-semibold">{item.label}</a>)}</div> : null}
             {navLinks.map((link) => {
               const items = dropdowns[link.label as keyof typeof dropdowns];
               return <div key={link.href} className="border-b border-border/60 py-1">
