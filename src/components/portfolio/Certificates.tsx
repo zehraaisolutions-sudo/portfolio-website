@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ArrowLeft, ArrowRight, Award, CalendarDays, Eye } from "lucide-react";
 import type { Certificate } from "@/data/portfolio";
 import socialMediaCert from "@/assets/certificate-ai-social-media-marketing.jpg";
-import vibeCodingCert from "@/assets/certificate-vibe-coding.jpg";
+import vibeCodingCert from "@/assets/certificate-vibe-coding.jpg.asset.json";
 import aiTrainingCert from "@/assets/certificate-ai-training.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -10,7 +10,7 @@ import { Reveal, SectionHeading } from "./Reveal";
 
 const certificates: Certificate[] = [
   { title: "AI Social Media Marketing Training", issuer: "Hassan Digital Skills", issued: "01 August 2026", duration: "1.5 Months", meta: "Awarded to Ismat Zehra", image: socialMediaCert },
-  { title: "Vibe Coding — Basic to Advance Level Training", issuer: "NDA Digital Skills", issued: "02 August 2026", duration: "1.5 Months", meta: "Awarded to Ismat Zehra", image: vibeCodingCert },
+  { title: "Vibe Coding — Basic to Advance Level Training", issuer: "NDA Digital Skills", issued: "02 August 2026", duration: "1.5 Months", meta: "Awarded to Ismat Zehra", image: vibeCodingCert.url },
   { title: "Artificial Intelligence — Basic to Advance Level Training", issuer: "NDA Digital Skills", issued: "02 September 2026", duration: "1.5 Months", meta: "Awarded to Ismat Zehra", image: aiTrainingCert.url },
 ];
 
