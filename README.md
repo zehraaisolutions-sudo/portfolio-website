@@ -150,7 +150,7 @@ polished UI, and an impressive first impression.  interconnected with links proj
 
 This project was built with [Lovable](https://lovable.dev).
 
-**Live app**: https://aipowered-showcase.lovable.app
+**Live app**: https://zehraaisolutions.lovable.app
 
 ## Build with Lovable
 
