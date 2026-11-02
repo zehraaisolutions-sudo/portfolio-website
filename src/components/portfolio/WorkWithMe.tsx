@@ -9,13 +9,13 @@ export function WorkWithMe() {
       <Reveal className="cta-panel mx-auto max-w-6xl overflow-hidden rounded-lg px-6 py-12 text-center sm:px-10 md:py-16">
         <p className="section-kicker">Start a conversation</p>
         <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-semibold sm:text-4xl md:text-5xl">
-          Have a project in mind? Let&apos;s build it with AI.
+          Let&apos;s Build Something Great Together
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
           Share your goals and explore a practical website or AI-powered solution built around your needs.
         </p>
         <Button asChild size="lg" className="mt-8 rounded-md">
-          <Link to="/contact">Start a Project <ArrowRight /></Link>
+          <Link to="/contact">Contact Me <ArrowRight /></Link>
         </Button>
       </Reveal>
     </section>
