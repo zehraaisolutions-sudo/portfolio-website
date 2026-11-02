@@ -4,7 +4,6 @@ import {
   Building2,
   Facebook,
   Github,
-  Instagram,
   Youtube,
   LayoutTemplate,
   Linkedin,
@@ -214,8 +213,8 @@ export const socials: Social[] = [
   { label: "GitHub", href: "https://github.com/zehraaisolutions-sudo", icon: Github },
   { label: "Facebook Page", href: "https://www.facebook.com/ZehraAISolutions", icon: Facebook },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/zehraaisolutions", icon: Linkedin },
-  { label: "YouTube", href: "https://www.youtube.com/@AIEducation-p2y", icon: Youtube },
-  { label: "Instagram", href: "https://www.instagram.com/aieducation.pk", icon: Instagram },
+  { label: "YouTube", href: "https://www.youtube.com/@BabyKahaniyan3D", icon: Youtube },
+  { label: "TikTok", href: "https://www.tiktok.com/@babykahaniyan3d", icon: null },
   { label: "WhatsApp", href: "https://wa.me/923435207875", icon: MessageCircle },
 ];
 
