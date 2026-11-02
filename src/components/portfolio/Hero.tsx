@@ -1,7 +1,6 @@
 import { ArrowRight, ArrowDown } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/zehra-logo.png.asset.json";
 import { CVButton, SocialIcons } from "./ProfileActions";
 
 export function Hero() {
