@@ -34,7 +34,7 @@ export function SectionHeading({
 }: {
   eyebrow: string;
   title: ReactNode;
-  subtitle?: string;
+  subtitle?: string | undefined;
 }) {
   return (
     <Reveal className="mx-auto max-w-2xl text-center">
