@@ -10,7 +10,7 @@ export function Steps({
 }: {
   eyebrow: string;
   title: ReactNode;
-  subtitle?: string;
+  subtitle?: string | undefined;
   steps: ReadonlyArray<{ title: string; description: string }>;
 }) {
   const columns = steps.length >= 4 ? "lg:grid-cols-4" : "lg:grid-cols-3";
