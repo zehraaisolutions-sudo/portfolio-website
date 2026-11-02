@@ -23,6 +23,28 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
+const stats = [
+  { value: "7+", label: "Portfolio Projects" },
+  { value: "9+", label: "Web Services" },
+  { value: "8+", label: "AI Fields" },
+  { value: "3+", label: "Completed Courses" },
+];
+
+function StatsStrip() {
+  return (
+    <section className="px-4 sm:px-6">
+      <div className="surface-elevated mx-auto grid max-w-6xl grid-cols-2 gap-6 rounded-lg border p-6 sm:p-8 lg:grid-cols-4">
+        {stats.map((stat) => (
+          <div key={stat.label} className="text-center">
+            <p className="gradient-text font-display text-4xl font-semibold">{stat.value}</p>
+            <p className="mt-1 text-xs text-muted-foreground sm:text-sm">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function HomePage() {
   return <main><Hero /><About /><Skills /><FeaturedProjects /><PracticalServices /><div id="home-preview"><Services compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/services">Explore all services <ArrowRight /></Link></Button></div><AIFields compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/ai-fields">Explore all AI fields <ArrowRight /></Link></Button></div><Portfolio compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/work">View all work <ArrowRight /></Link></Button></div><Certificates /><WhyChooseMe /><Testimonials /><WorkWithMe /><Contact /></div></main>;
 }
