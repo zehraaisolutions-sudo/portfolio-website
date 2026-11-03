@@ -3,7 +3,6 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { About } from "@/components/portfolio/About";
 import { Skills } from "@/components/portfolio/Skills";
-import { FeaturedProjects } from "@/components/portfolio/FeaturedProjects";
 import { PracticalServices } from "@/components/portfolio/PracticalServices";
 import { Contact } from "@/components/portfolio/Contact";
 import { Hero } from "@/components/portfolio/Hero";
@@ -46,5 +45,5 @@ function StatsStrip() {
 }
 
 function HomePage() {
-  return <main><Hero /><StatsStrip /><About /><Skills /><FeaturedProjects /><PracticalServices /><div id="home-preview"><Services compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/services">Explore all services <ArrowRight /></Link></Button></div><AIFields compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/ai-fields">Explore all AI fields <ArrowRight /></Link></Button></div><Portfolio compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/work">View all work <ArrowRight /></Link></Button></div><Certificates /><WhyChooseMe /><Testimonials /><WorkWithMe /><Contact /></div></main>;
+  return <main><Hero /><StatsStrip /><About /><Skills /><PracticalServices /><div id="home-preview"><Services compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/services">Explore all services <ArrowRight /></Link></Button></div><AIFields compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/ai-fields">Explore all AI fields <ArrowRight /></Link></Button></div><Portfolio compact /><div className="-mt-14 mb-8 flex justify-center"><Button asChild variant="outline"><Link to="/work">View all work <ArrowRight /></Link></Button></div><Certificates /><WhyChooseMe /><Testimonials /><WorkWithMe /><Contact /></div></main>;
 }
