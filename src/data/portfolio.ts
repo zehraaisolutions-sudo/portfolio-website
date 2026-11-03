@@ -4,6 +4,7 @@ import {
   Building2,
   Facebook,
   Github,
+  Instagram,
   Youtube,
   LayoutTemplate,
   Linkedin,
