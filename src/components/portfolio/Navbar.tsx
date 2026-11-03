@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ChevronDown, Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react";
-import { aiFields, navLinks, services } from "@/data/portfolio";
+import { aiFields, navLinks, projects, services } from "@/data/portfolio";
 import logoAsset from "@/assets/zehra-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "./useTheme";
@@ -37,8 +37,11 @@ export function Navbar() {
                 </Link>
                 {items ? (
                   <div className="surface-elevated invisible absolute left-0 top-[calc(100%+8px)] w-72 translate-y-2 rounded-lg border p-2 opacity-0 shadow-2xl transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                    {link.label === "Work" ? groups.map((group) => (
-                      <Link key={group} to="/work" search={{ category: group }} className="block rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground">{group}</Link>
+                     {link.label === "Work" ? groups.map((group) => (
+                      <div key={group} className="p-2">
+                        <Link to="/work" search={{ category: group }} className="text-xs font-semibold uppercase text-accent">{group}</Link>
+                        <div className="mt-1 grid gap-1">{projects.filter((p) => p.group === group).map((p) => <a key={p.title} href={p.url} target="_blank" rel="noopener noreferrer" className="rounded-md px-2 py-1.5 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground">{p.title}</a>)}</div>
+                      </div>
                     )) : items.map((item, index) => (
                       <Link key={item} to={link.href} hash={link.label === "Services" ? `service-${index + 1}` : `field-${index + 1}`} className="block rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground">{item}</Link>
                     ))}
