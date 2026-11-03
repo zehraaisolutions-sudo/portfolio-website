@@ -214,6 +214,7 @@ export const socials: Social[] = [
   { label: "Facebook Page", href: "https://www.facebook.com/ZehraAISolutions", icon: Facebook },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/zehraaisolutions", icon: Linkedin },
   { label: "YouTube", href: "https://www.youtube.com/@BabyKahaniyan3D", icon: Youtube },
+  { label: "Instagram", href: "https://www.instagram.com/babykahaniyan3d/", icon: Instagram },
   { label: "TikTok", href: "https://www.tiktok.com/@babykahaniyan3d", icon: null },
   { label: "WhatsApp", href: "https://wa.me/923435207875", icon: MessageCircle },
 ];
