@@ -65,7 +65,7 @@ export function Portfolio({ compact = false, initialCategory = "All" }: { compac
         ) : null}
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((project, index) => <Reveal key={project.title} delay={(index % 3) * 0.06}>
-            <article className="surface-elevated card-lift group flex h-full flex-col overflow-hidden rounded-lg border">
+            <article id={slug(project.title)} className={`surface-elevated card-lift group flex h-full flex-col overflow-hidden rounded-lg border transition-shadow ${highlight === project.title ? "ring-2 ring-accent" : ""}`}>
               <div className="project-preview relative grid aspect-[16/10] place-items-center overflow-hidden border-b">
                 <div className="grid-pattern absolute inset-0 opacity-40" />
                 <span className="absolute left-3 top-3 rounded-md border bg-background/80 px-2.5 py-1 text-[10px] font-semibold uppercase text-muted-foreground backdrop-blur">{project.label}</span>
