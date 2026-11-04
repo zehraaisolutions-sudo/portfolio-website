@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ExternalLink, Eye } from "lucide-react";
+import { ChevronRight, ExternalLink, Eye } from "lucide-react";
 import { projects } from "@/data/portfolio";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -7,10 +7,30 @@ import { Reveal, SectionHeading } from "./Reveal";
 
 const filters = ["All", "Business Websites", "Landing Pages", "Personal Brand"] as const;
 
+const workMenu: Array<{ label: string; projects: typeof projects }> = [
+  { label: "Business Websites", projects: projects.filter((project) => project.group === "Business Websites") },
+  { label: "Landing Pages", projects: projects.filter((project) => project.group === "Landing Pages") },
+  { label: "Personal Brand", projects: projects.filter((project) => project.group === "Personal Brand") },
+];
+
+const slug = (title: string) => `work-${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+
 export function Portfolio({ compact = false, initialCategory = "All" }: { compact?: boolean; initialCategory?: string | undefined }) {
   const [filter, setFilter] = useState(filters.includes(initialCategory as typeof filters[number]) ? initialCategory : "All");
   const [preview, setPreview] = useState<(typeof projects)[number] | null>(null);
+  const [highlight, setHighlight] = useState<string | null>(null);
   const visible = projects.filter((project) => filter === "All" || project.group === filter).slice(0, compact ? 3 : projects.length);
+
+  const jumpToProject = (group: string, title: string) => {
+    setFilter(group);
+    requestAnimationFrame(() => {
+      const target = document.getElementById(slug(title));
+      if (!target) return;
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+      setHighlight(title);
+      window.setTimeout(() => setHighlight(null), 2200);
+    });
+  };
 
   return (
     <section id="portfolio" className="px-4 py-20 sm:px-6 md:py-28">
