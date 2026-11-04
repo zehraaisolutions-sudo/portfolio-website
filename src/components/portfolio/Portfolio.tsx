@@ -36,7 +36,33 @@ export function Portfolio({ compact = false, initialCategory = "All" }: { compac
     <section id="portfolio" className="px-4 py-20 sm:px-6 md:py-28">
       <div className="mx-auto max-w-6xl">
         <SectionHeading eyebrow="Selected Work" title={<>Websites designed to be <span className="gradient-text">seen and used</span></>} subtitle="Every project links to its published website and is clearly identified as demo or concept work." />
-        {!compact ? <div className="mt-10 flex flex-wrap justify-center gap-2" aria-label="Filter projects">{filters.map((item) => <Button key={item} variant={filter === item ? "default" : "outline"} onClick={() => setFilter(item)} className="rounded-md">{item}</Button>)}</div> : null}
+        {!compact ? (
+          <nav className="surface-elevated mt-10 rounded-lg border p-5 sm:p-6" aria-label="Work navigation">
+            <div className="grid gap-6 sm:grid-cols-3">
+              {workMenu.map((group) => (
+                <div key={group.label}>
+                  <Button variant={filter === group.label ? "default" : "outline"} onClick={() => setFilter(group.label)} className="h-auto w-full justify-between rounded-md px-3 py-2 text-sm font-semibold">
+                    {group.label}
+                    <ChevronRight className="size-4 opacity-70" />
+                  </Button>
+                  <ul className="mt-3 space-y-1">
+                    {group.projects.map((project) => (
+                      <li key={project.title}>
+                        <button onClick={() => jumpToProject(group.label, project.title)} className="group/item flex w-full items-center gap-1.5 rounded-md px-3 py-1.5 text-left text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">
+                          <span className="size-1 rounded-full bg-accent opacity-60" />
+                          {project.title}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div className="mt-5 flex flex-wrap justify-center gap-2 border-t pt-5" aria-label="Filter projects">
+              {filters.map((item) => <Button key={item} size="sm" variant={filter === item ? "default" : "outline"} onClick={() => setFilter(item)} className="rounded-md">{item}</Button>)}
+            </div>
+          </nav>
+        ) : null}
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((project, index) => <Reveal key={project.title} delay={(index % 3) * 0.06}>
             <article className="surface-elevated card-lift group flex h-full flex-col overflow-hidden rounded-lg border">
