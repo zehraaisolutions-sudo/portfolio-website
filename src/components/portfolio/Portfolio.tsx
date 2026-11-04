@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronRight, ExternalLink, Eye } from "lucide-react";
+import { ExternalLink, Eye } from "lucide-react";
 import { projects } from "@/data/portfolio";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -7,65 +7,19 @@ import { Reveal, SectionHeading } from "./Reveal";
 
 const filters = ["All", "Business Websites", "Landing Pages", "Personal Brand"] as const;
 
-const workMenu: Array<{ label: string; projects: typeof projects }> = [
-  { label: "Business Websites", projects: projects.filter((project) => project.group === "Business Websites") },
-  { label: "Landing Pages", projects: projects.filter((project) => project.group === "Landing Pages") },
-  { label: "Personal Brand", projects: projects.filter((project) => project.group === "Personal Brand") },
-];
-
-const slug = (title: string) => `work-${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
-
 export function Portfolio({ compact = false, initialCategory = "All" }: { compact?: boolean; initialCategory?: string | undefined }) {
   const [filter, setFilter] = useState(filters.includes(initialCategory as typeof filters[number]) ? initialCategory : "All");
   const [preview, setPreview] = useState<(typeof projects)[number] | null>(null);
-  const [highlight, setHighlight] = useState<string | null>(null);
   const visible = projects.filter((project) => filter === "All" || project.group === filter).slice(0, compact ? 3 : projects.length);
-
-  const jumpToProject = (group: string, title: string) => {
-    setFilter(group);
-    requestAnimationFrame(() => {
-      const target = document.getElementById(slug(title));
-      if (!target) return;
-      target.scrollIntoView({ behavior: "smooth", block: "center" });
-      setHighlight(title);
-      window.setTimeout(() => setHighlight(null), 2200);
-    });
-  };
 
   return (
     <section id="portfolio" className="px-4 py-20 sm:px-6 md:py-28">
       <div className="mx-auto max-w-6xl">
         <SectionHeading eyebrow="Selected Work" title={<>Websites designed to be <span className="gradient-text">seen and used</span></>} subtitle="Every project links to its published website and is clearly identified as demo or concept work." />
-        {!compact ? (
-          <nav className="surface-elevated mt-10 rounded-lg border p-5 sm:p-6" aria-label="Work navigation">
-            <div className="grid gap-6 sm:grid-cols-3">
-              {workMenu.map((group) => (
-                <div key={group.label}>
-                  <Button variant={filter === group.label ? "default" : "outline"} onClick={() => setFilter(group.label)} className="h-auto w-full justify-between rounded-md px-3 py-2 text-sm font-semibold">
-                    {group.label}
-                    <ChevronRight className="size-4 opacity-70" />
-                  </Button>
-                  <ul className="mt-3 space-y-1">
-                    {group.projects.map((project) => (
-                      <li key={project.title}>
-                        <button onClick={() => jumpToProject(group.label, project.title)} className="group/item flex w-full items-center gap-1.5 rounded-md px-3 py-1.5 text-left text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">
-                          <span className="size-1 rounded-full bg-accent opacity-60" />
-                          {project.title}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-            <div className="mt-5 flex flex-wrap justify-center gap-2 border-t pt-5" aria-label="Filter projects">
-              {filters.map((item) => <Button key={item} size="sm" variant={filter === item ? "default" : "outline"} onClick={() => setFilter(item)} className="rounded-md">{item}</Button>)}
-            </div>
-          </nav>
-        ) : null}
+        {!compact ? <div className="mt-10 flex flex-wrap justify-center gap-2" aria-label="Filter projects">{filters.map((item) => <Button key={item} variant={filter === item ? "default" : "outline"} onClick={() => setFilter(item)} className="rounded-md">{item}</Button>)}</div> : null}
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((project, index) => <Reveal key={project.title} delay={(index % 3) * 0.06}>
-            <article id={slug(project.title)} className={`surface-elevated card-lift group flex h-full flex-col overflow-hidden rounded-lg border transition-shadow ${highlight === project.title ? "ring-2 ring-accent" : ""}`}>
+            <article className="surface-elevated card-lift group flex h-full flex-col overflow-hidden rounded-lg border">
               <div className="project-preview relative grid aspect-[16/10] place-items-center overflow-hidden border-b">
                 <div className="grid-pattern absolute inset-0 opacity-40" />
                 <span className="absolute left-3 top-3 rounded-md border bg-background/80 px-2.5 py-1 text-[10px] font-semibold uppercase text-muted-foreground backdrop-blur">{project.label}</span>
