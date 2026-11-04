@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
 import { PageIntro } from "@/components/portfolio/PageIntro";
 import { Portfolio } from "@/components/portfolio/Portfolio";
+import { WorkNav } from "@/components/portfolio/WorkNav";
 import { WorkWithMe } from "@/components/portfolio/WorkWithMe";
 
 const title = "Work | Zehra AI Solutions";
