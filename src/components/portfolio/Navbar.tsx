@@ -25,7 +25,7 @@ export function Navbar() {
       <nav aria-label="Main navigation" className="mx-auto grid h-20 max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 sm:px-6">
         <Link to="/" onClick={close} className="flex min-w-0 items-center gap-3">
           <img src={logoAsset.url} alt="Zehra AI Solutions logo" width={40} height={40} className="size-10 shrink-0 rounded-full" />
-          <span className="truncate font-display text-base font-semibold sm:text-lg">Zehra <span className="text-accent">AI</span> Solutions</span>
+          <span className="truncate font-display text-base font-semibold sm:text-lg">Ismat Zehra</span>
         </Link>
         <div className="hidden items-center gap-1 lg:flex">
           {navLinks.map((link) => {

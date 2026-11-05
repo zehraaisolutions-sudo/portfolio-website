@@ -9,7 +9,7 @@ export function Footer() {
     <FooterGroup title="Services" items={services.map((item) => ({ label: item.title, href: "/services" }))} />
     <FooterGroup title="AI Fields" items={aiFields.map((item) => ({ label: item.title.replace(" Services", ""), href: "/ai-fields" }))} />
     <div><h2 className="text-sm font-semibold">Connect</h2><ul className="mt-4 grid gap-2.5">{socials.map((social) => <li key={social.label}><a href={social.href} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">{social.label}</a></li>)}</ul><h2 className="mt-7 text-sm font-semibold">Work</h2><ul className="mt-3 grid gap-2 text-sm text-muted-foreground"><li><Link to="/work" search={{ category: "Business Websites" }}>Business Websites</Link></li><li><Link to="/work" search={{ category: "Landing Pages" }}>Landing Pages</Link></li><li><Link to="/work" search={{ category: "Personal Brand" }}>Personal Brand</Link></li></ul></div>
-  </div><p className="mt-10 border-t pt-6 text-xs text-muted-foreground">© 2026 Zehra AI Solutions. All rights reserved.</p></div></footer>;
+  </div><p className="mt-10 border-t pt-6 text-xs text-muted-foreground">© 2026 Ismat Zehra · Founder, Zehra AI Solutions</p></div></footer>;
 }
 
 function FooterGroup({ title, items }: { title: string; items: ReadonlyArray<{ label: string; href: NavPath }> }) {
