@@ -1,6 +1,6 @@
 import { Code2, BrainCircuit, Megaphone, Terminal, Globe2, PenLine, Bot, Workflow, Wrench, Youtube, LayoutTemplate, CalendarDays } from 'lucide-react';
 
-export const biography = 'I am Zehra, a DAE CIT graduate from GPIW H-8/1 Islamabad with training in AI, WordPress website development, and AI social-media marketing. I create modern websites, AI-powered content, and simple digital solutions for individuals and small businesses. I am currently building my portfolio through practical projects in web development, AI tools, and content creation.';
+export const biography = 'I am  Ismat Zehra, a DAE CIT graduate from GPIW H-8/1 Islamabad with training in AI, WordPress website development, and AI social-media marketing. I create modern websites, AI-powered content, and simple digital solutions for individuals and small businesses. I am currently building my portfolio through practical projects in web development, AI tools, and content creation.';
 export const skillGroups = [
   { title: 'Web Development', icon: Code2, skills: ['WordPress', 'HTML', 'CSS', 'JavaScript basics', 'React', 'Tailwind CSS', 'Vibe Coding', 'Responsive Design', 'Elementor'] },
   { title: 'AI Tools', icon: BrainCircuit, skills: ['Prompt Engineering', 'AI Content Creation', 'AI Chatbots', 'AI Automation', 'AI Research', 'AI Video', 'AI Design', 'ChatGPT', 'Claude', 'Cursor', 'Replit'] },
