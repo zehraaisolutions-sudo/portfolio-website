@@ -238,7 +238,7 @@
 }
 
 @utility gradient-surface {
-  background-image: var(--gradient-brand);
+  background-image: var(--gradient-solid);
 }
 
 @utility aurora {
@@ -311,6 +311,7 @@
     var(--brand-blue) 50%,
     var(--brand-cyan)
   );
+  --gradient-solid: linear-gradient(120deg, var(--brand-purple), var(--brand-blue));
   --shadow-card: 0 14px 34px -22px color-mix(in oklab, var(--brand-purple) 55%, transparent);
   --shadow-glow: 0 0 0 1px var(--border);
   --gradient-aurora: none;
