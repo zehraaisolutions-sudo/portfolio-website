@@ -298,22 +298,42 @@
   }
 }
 
-/* Restrained blue/cyan brand treatment across both themes. */
+/* Zehra AI Solutions brand palette (matches the logo): deep midnight navy,
+   white text, violet highlights, restrained blue/cyan accents.
+   The light theme above is intentionally left unchanged. */
 :root, .dark {
-  --brand-blue: var(--primary);
-  --brand-purple: var(--primary);
-  --brand-cyan: var(--accent);
-  --gradient-brand: linear-gradient(120deg, var(--primary), var(--accent));
-  --shadow-card: 0 12px 28px -20px color-mix(in oklab, var(--foreground) 24%, transparent);
+  --brand-blue: oklch(0.623 0.188 259.8);
+  --brand-purple: oklch(0.627 0.233 303.9);
+  --brand-cyan: oklch(0.797 0.134 211.5);
+  --gradient-brand: linear-gradient(
+    120deg,
+    var(--brand-purple),
+    var(--brand-blue) 50%,
+    var(--brand-cyan)
+  );
+  --shadow-card: 0 14px 34px -22px color-mix(in oklab, var(--brand-purple) 55%, transparent);
   --shadow-glow: 0 0 0 1px var(--border);
   --gradient-aurora: none;
 }
 .dark {
-  --background: oklch(0.15 0.012 260);
-  --card: oklch(0.19 0.014 260);
+  --background: oklch(0.134 0.064 278);
+  --card: oklch(0.195 0.086 279.6);
   --popover: var(--card);
-  --secondary: oklch(0.24 0.016 260);
+  --secondary: oklch(0.25 0.09 282);
   --muted: var(--secondary);
+  --foreground: oklch(1 0 0);
+  --body-text: oklch(0.889 0.029 285.8);
+  --muted-foreground: oklch(0.743 0.041 288.5);
+  --primary: oklch(0.541 0.247 293);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary-foreground: oklch(0.98 0 0);
+  --accent: oklch(0.797 0.134 211.5);
+  --accent-foreground: oklch(0.134 0.064 278);
+  --border: oklch(0.307 0.096 289.4);
+  --input: oklch(0.36 0.1 288);
+  --ring: oklch(0.797 0.134 211.5);
+  --glass: oklch(0.195 0.086 279.6 / 82%);
+  --glass-border: oklch(0.307 0.096 289.4 / 70%);
 }
 html { scroll-padding-top: 6rem; }
 .hero-visual, .project-preview { background: var(--secondary); }
