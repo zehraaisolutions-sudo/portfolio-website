@@ -211,9 +211,9 @@ export const reasons = [
 export type Social = { label: string; href: string; icon: LucideIcon | null };
 
 export const socials: Social[] = [
-  { label: "GitHub", href: "https://github.com/zehraaisolutions-sudo", icon: Github },
+  { label: "GitHub", href: "https://github.com/zehraaisolutions-sudo/", icon: Github },
   { label: "Facebook Page", href: "https://www.facebook.com/ZehraAISolutions", icon: Facebook },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/zehraaisolutions", icon: Linkedin },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/ismatzehra/", icon: Linkedin },
   { label: "YouTube", href: "https://www.youtube.com/@BabyKahaniyan3D", icon: Youtube },
   { label: "Instagram", href: "https://www.instagram.com/babykahaniyan3d/", icon: Instagram },
   { label: "TikTok", href: "https://www.tiktok.com/@babykahaniyan3d", icon: null },
