@@ -337,4 +337,8 @@
   --glass-border: oklch(0.307 0.096 289.4 / 70%);
 }
 html { scroll-padding-top: 6rem; }
+/* Cyan stays readable in dark; light-mode heading gradients end at blue. */
+html:not(.dark) {
+  --gradient-brand: linear-gradient(120deg, var(--brand-purple), var(--brand-blue));
+}
 .hero-visual, .project-preview { background: var(--secondary); }
