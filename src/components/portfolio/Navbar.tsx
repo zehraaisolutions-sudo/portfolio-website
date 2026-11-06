@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ChevronDown, Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react";
 import { aiFields, navLinks, projects, services } from "@/data/portfolio";
-import logoAsset from "@/assets/zehra-logo.png.asset.json";
+import logoAsset from "@/assets/iz-mark.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "./useTheme";
 
@@ -24,7 +24,7 @@ export function Navbar() {
     <header className="fixed inset-x-0 top-0 z-[60] border-b border-border/70 bg-background/85 backdrop-blur-xl">
       <nav aria-label="Main navigation" className="mx-auto grid h-20 max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 sm:px-6">
         <Link to="/" onClick={close} className="flex min-w-0 items-center gap-3">
-          <img src={logoAsset.url} alt="Zehra AI Solutions logo" width={40} height={40} className="size-10 shrink-0 rounded-full" />
+          <img src={logoAsset.url} alt="Ismat Zehra logo" width={40} height={40} className="size-10 shrink-0 rounded-full" />
           <span className="truncate font-display text-base font-semibold sm:text-lg">Ismat Zehra</span>
         </Link>
         <div className="hidden items-center gap-1 lg:flex">

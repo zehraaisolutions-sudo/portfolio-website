@@ -40,38 +40,44 @@
   --color-brand-cyan: var(--brand-cyan);
   --color-glass: var(--glass);
   --color-glass-border: var(--glass-border);
+  --color-footer: var(--footer);
+  --color-footer-foreground: var(--footer-foreground);
   --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(0.985 0.005 260);
-  --foreground: oklch(0.18 0.03 265);
+  /* Ismat Zehra brand palette (from the IZ logo) */
+  --background: oklch(0.949 0.028 109.1); /* cream #EFF0DB */
+  --foreground: oklch(0.419 0.066 110.1); /* olive #4F5022 */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.03 265);
+  --card-foreground: oklch(0.419 0.066 110.1);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.03 265);
-  --primary: oklch(0.56 0.2 258);
-  --primary-foreground: oklch(0.99 0.005 260);
-  --secondary: oklch(0.95 0.015 265);
-  --secondary-foreground: oklch(0.25 0.04 265);
-  --muted: oklch(0.95 0.012 265);
-  --muted-foreground: oklch(0.5 0.03 265);
-  --accent: oklch(0.72 0.14 210);
-  --accent-foreground: oklch(0.16 0.03 265);
+  --popover-foreground: oklch(0.419 0.066 110.1);
+  --primary: oklch(0.419 0.066 110.1);
+  --primary-foreground: oklch(0.949 0.028 109.1);
+  --secondary: oklch(0.902 0.035 108);
+  --secondary-foreground: oklch(0.419 0.066 110.1);
+  --muted: oklch(0.905 0.03 108);
+  --muted-foreground: oklch(0.52 0.05 110);
+  --accent: oklch(0.737 0.066 70.3); /* gold #C5A37C */
+  --accent-foreground: oklch(0.419 0.066 110.1);
   --destructive: oklch(0.6 0.23 25);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.88 0.015 265);
-  --input: oklch(0.9 0.015 265);
-  --ring: oklch(0.55 0.22 275);
+  --border: oklch(0.855 0.035 108);
+  --input: oklch(0.875 0.03 108);
+  --ring: oklch(0.737 0.066 70.3);
 
-  --brand-blue: oklch(0.62 0.2 262);
-  --brand-purple: oklch(0.56 0.2 258);
-  --brand-cyan: oklch(0.78 0.14 200);
-  --body-text: oklch(0.18 0.03 265);
+  --footer: oklch(0.419 0.066 110.1);
+  --footer-foreground: oklch(0.949 0.028 109.1);
+
+  --brand-blue: oklch(0.419 0.066 110.1); /* olive */
+  --brand-purple: oklch(0.737 0.066 70.3); /* gold */
+  --brand-cyan: oklch(0.85 0.05 75); /* soft gold */
+  --body-text: oklch(0.419 0.066 110.1);
   --glass: oklch(1 0 0 / 60%);
-  --glass-border: oklch(0.18 0.03 265 / 10%);
+  --glass-border: oklch(0.419 0.066 110.1 / 10%);
 
   --gradient-brand: linear-gradient(
     120deg,
@@ -298,18 +304,16 @@
   }
 }
 
-/* Zehra AI Solutions brand palette (matches the logo): deep midnight navy,
-   white text, violet highlights, restrained blue/cyan accents.
-   The light theme above is intentionally left unchanged. */
+/* Ismat Zehra brand palette (matches the IZ logo): cream, olive, gold.
+   Gradients run gold → olive; aurora stays off. */
 :root, .dark {
-  --brand-blue: oklch(0.623 0.188 259.8);
-  --brand-purple: oklch(0.627 0.233 303.9);
-  --brand-cyan: oklch(0.797 0.134 211.5);
+  --brand-blue: oklch(0.419 0.066 110.1);
+  --brand-purple: oklch(0.737 0.066 70.3);
+  --brand-cyan: oklch(0.85 0.05 75);
   --gradient-brand: linear-gradient(
     120deg,
     var(--brand-purple),
-    var(--brand-blue) 50%,
-    var(--brand-cyan)
+    var(--brand-blue)
   );
   --gradient-solid: linear-gradient(120deg, var(--brand-purple), var(--brand-blue));
   --shadow-card: 0 14px 34px -22px color-mix(in oklab, var(--brand-purple) 55%, transparent);
@@ -317,28 +321,27 @@
   --gradient-aurora: none;
 }
 .dark {
-  --background: oklch(0.134 0.064 278);
-  --card: oklch(0.195 0.086 279.6);
+  /* Deep olive night theme with gold accents */
+  --background: oklch(0.201 0.03 110);
+  --card: oklch(0.245 0.035 110);
   --popover: var(--card);
-  --secondary: oklch(0.25 0.09 282);
+  --secondary: oklch(0.3 0.04 112);
   --muted: var(--secondary);
-  --foreground: oklch(1 0 0);
-  --body-text: oklch(0.889 0.029 285.8);
-  --muted-foreground: oklch(0.743 0.041 288.5);
-  --primary: oklch(0.541 0.247 293);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary-foreground: oklch(0.98 0 0);
-  --accent: oklch(0.797 0.134 211.5);
-  --accent-foreground: oklch(0.134 0.064 278);
-  --border: oklch(0.307 0.096 289.4);
-  --input: oklch(0.36 0.1 288);
-  --ring: oklch(0.797 0.134 211.5);
-  --glass: oklch(0.195 0.086 279.6 / 82%);
-  --glass-border: oklch(0.307 0.096 289.4 / 70%);
+  --foreground: oklch(0.949 0.028 109.1);
+  --body-text: oklch(0.9 0.03 109);
+  --muted-foreground: oklch(0.75 0.04 108);
+  --primary: oklch(0.737 0.066 70.3);
+  --primary-foreground: oklch(0.2 0.03 110);
+  --secondary-foreground: oklch(0.95 0.02 109);
+  --accent: oklch(0.78 0.07 72);
+  --accent-foreground: oklch(0.2 0.03 110);
+  --border: oklch(1 0 0 / 14%);
+  --input: oklch(1 0 0 / 18%);
+  --ring: oklch(0.78 0.07 72);
+  --glass: oklch(0.245 0.035 110 / 82%);
+  --glass-border: oklch(1 0 0 / 12%);
+  --footer: oklch(0.16 0.025 110);
+  --footer-foreground: oklch(0.949 0.028 109.1);
 }
 html { scroll-padding-top: 6rem; }
-/* Cyan stays readable in dark; light-mode heading gradients end at blue. */
-html:not(.dark) {
-  --gradient-brand: linear-gradient(120deg, var(--brand-purple), var(--brand-blue));
-}
 .hero-visual, .project-preview { background: var(--secondary); }
