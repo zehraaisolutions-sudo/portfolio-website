@@ -8,3 +8,5 @@
 - [x] Complete approved multi-page portfolio redesign.
 - [x] Verify all shared navigation and footer links connect to every page.
 - [x] Verify responsive layout, filters, certificate viewer, forms, and protected URLs.
+- [ ] Apply owner-supplied olive/gold/cream palette and new IZ brand logo (nav, footer, favicon).
+- [ ] Replace website CV PDF with newly uploaded Ismat_Zehra_Professional_CV-3.docx.
