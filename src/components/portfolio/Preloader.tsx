@@ -21,7 +21,7 @@ export function Preloader() {
         >
           <motion.img
             src={logoAsset.url}
-            alt="Zehra AI Solutions logo"
+            alt="Ismat Zehra logo"
             width={88}
             height={88}
             className="glow-ring size-22 rounded-full"
