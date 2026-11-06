@@ -40,6 +40,8 @@
   --color-brand-cyan: var(--brand-cyan);
   --color-glass: var(--glass);
   --color-glass-border: var(--glass-border);
+  --color-footer: var(--footer);
+  --color-footer-foreground: var(--footer-foreground);
   --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
 }
@@ -319,28 +321,27 @@
   --gradient-aurora: none;
 }
 .dark {
-  --background: oklch(0.134 0.064 278);
-  --card: oklch(0.195 0.086 279.6);
+  /* Deep olive night theme with gold accents */
+  --background: oklch(0.201 0.03 110);
+  --card: oklch(0.245 0.035 110);
   --popover: var(--card);
-  --secondary: oklch(0.25 0.09 282);
+  --secondary: oklch(0.3 0.04 112);
   --muted: var(--secondary);
-  --foreground: oklch(1 0 0);
-  --body-text: oklch(0.889 0.029 285.8);
-  --muted-foreground: oklch(0.743 0.041 288.5);
-  --primary: oklch(0.541 0.247 293);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary-foreground: oklch(0.98 0 0);
-  --accent: oklch(0.797 0.134 211.5);
-  --accent-foreground: oklch(0.134 0.064 278);
-  --border: oklch(0.307 0.096 289.4);
-  --input: oklch(0.36 0.1 288);
-  --ring: oklch(0.797 0.134 211.5);
-  --glass: oklch(0.195 0.086 279.6 / 82%);
-  --glass-border: oklch(0.307 0.096 289.4 / 70%);
+  --foreground: oklch(0.949 0.028 109.1);
+  --body-text: oklch(0.9 0.03 109);
+  --muted-foreground: oklch(0.75 0.04 108);
+  --primary: oklch(0.737 0.066 70.3);
+  --primary-foreground: oklch(0.2 0.03 110);
+  --secondary-foreground: oklch(0.95 0.02 109);
+  --accent: oklch(0.78 0.07 72);
+  --accent-foreground: oklch(0.2 0.03 110);
+  --border: oklch(1 0 0 / 14%);
+  --input: oklch(1 0 0 / 18%);
+  --ring: oklch(0.78 0.07 72);
+  --glass: oklch(0.245 0.035 110 / 82%);
+  --glass-border: oklch(1 0 0 / 12%);
+  --footer: oklch(0.16 0.025 110);
+  --footer-foreground: oklch(0.949 0.028 109.1);
 }
 html { scroll-padding-top: 6rem; }
-/* Cyan stays readable in dark; light-mode heading gradients end at blue. */
-html:not(.dark) {
-  --gradient-brand: linear-gradient(120deg, var(--brand-purple), var(--brand-blue));
-}
 .hero-visual, .project-preview { background: var(--secondary); }
