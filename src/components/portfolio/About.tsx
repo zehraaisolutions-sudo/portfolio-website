@@ -1,5 +1,5 @@
 import { BrainCircuit, Code2, Megaphone, Sparkles } from "lucide-react";
-import logoAsset from "@/assets/zehra-logo.png.asset.json";
+import logoAsset from "@/assets/iz-mark.png.asset.json";
 import { Reveal, SectionHeading } from "./Reveal";
 import { biography } from "@/data/profile";
 import { CVButton } from "./ProfileActions";

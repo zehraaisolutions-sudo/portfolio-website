@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
-import logoAsset from "@/assets/zehra-logo.png.asset.json";
+import logoAsset from "@/assets/iz-mark.png.asset.json";
 
 /** Brand loading animation shown on first paint. */
 export function Preloader() {

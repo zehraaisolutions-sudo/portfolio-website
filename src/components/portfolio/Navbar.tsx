@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ChevronDown, Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react";
 import { aiFields, navLinks, projects, services } from "@/data/portfolio";
-import logoAsset from "@/assets/zehra-logo.png.asset.json";
+import logoAsset from "@/assets/iz-mark.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "./useTheme";
 

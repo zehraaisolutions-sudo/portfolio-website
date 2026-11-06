@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { aiFields, navLinks, services, socials, type NavPath } from "@/data/portfolio";
-import logoAsset from "@/assets/zehra-logo.png.asset.json";
+import logoAsset from "@/assets/iz-mark.png.asset.json";
 
 export function Footer() {
   return <footer className="border-t border-border/70 bg-card/40 px-4 py-12 sm:px-6"><div className="mx-auto max-w-7xl"><div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
